@@ -1,0 +1,78 @@
+.service {
+    padding: 0 1rem;
+}
+
+.service_wrap {
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    color: rgba(51, 51, 51, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service_wrap p:nth-child(2) {
+    font-size: 1rem;
+    color: rgba(134, 134, 134, 1);
+}
+
+/* 回复 */
+.reply {
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    padding: 0.5rem 0 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.reply h4 {
+    font-size: 1.4rem;
+    color: rgba(51, 51, 51, 1);
+    margin-left: 0.5rem;
+}
+
+.title {
+    font-size: 1rem;
+    color: rgba(134, 134, 134, 1);
+    margin: 1rem 0 0 0.5rem;
+}
+
+.reply_uu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+}
+
+.reply_uu li img {
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: 0 0 0.4rem 0.7rem;
+    border-radius: 4px;
+}
+
+.service_foot {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.service_foot input {
+    width: 76%;
+    height: 3rem;
+    border: 0;
+    outline: none;
+    padding-left: 1.5rem;
+}
+
+.speak {
+    display: block;
+    width: 20%;
+    height: 3rem;
+    background: rgba(0, 146, 255, 1);
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 3rem;
+}

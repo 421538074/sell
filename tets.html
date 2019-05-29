@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style type="text/css">
+    span.star i {
+        display: inline-block;
+        background: url(img/star.png) no-repeat center center;
+        background-size: 20px 20px;
+        width: 24px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    span.star.sel i {
+        display: inline-block;
+        background: url(img/star1.png) no-repeat center center;
+        background-size: 20px 20px;
+        width: 24px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<body>
+    <table class="tab_star">
+        <tr>
+            <td>1.口齿是否清楚口齿是否口齿是否清楚 </td>
+            <td>
+                <span class="star sel" title="1"><i></i></span>
+                <span class="star" title="2"><i></i></span>
+                <span class="star" title="3"><i></i></span>
+                <span class="star" title="4"><i></i></span>
+                <span class="star" title="5"><i></i></span>
+            </td>
+        </tr>
+        <tr>
+            <td>2.口齿是否清楚口齿是否口齿是否清楚 </td>
+            <td>
+                <span class="star sel" title="1"><i></i></span>
+                <span class="star" title="2"><i></i></span>
+                <span class="star" title="3"><i></i></span>
+                <span class="star" title="4"><i></i></span>
+                <span class="star" title="5"><i></i></span>
+            </td>
+        </tr>
+        <tr>
+            <td>3.口齿是否清楚口齿是否口齿是否清楚 </td>
+            <td>
+                <span class="star sel" title="1"><i></i></span>
+                <span class="star" title="2"><i></i></span>
+                <span class="star" title="3"><i></i></span>
+                <span class="star" title="4"><i></i></span>
+                <span class="star" title="5"><i></i></span>
+            </td>
+        </tr>
+        <tr>
+            <td>4.口齿是否清楚口齿是否口齿是否清楚 </td>
+            <td>
+                <span class="star sel" title="1"><i></i></span>
+                <span class="star" title="2"><i></i></span>
+                <span class="star" title="3"><i></i></span>
+                <span class="star" title="4"><i></i></span>
+                <span class="star" title="5"><i></i></span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("span.star").bind("click", function () {
+            $(this).parent("td").find("span.star").removeClass("sel");
+            $(this).addClass("sel");
+            $(this).prevAll().addClass("sel");
+        });
+
+    });
+</script>

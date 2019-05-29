@@ -1,0 +1,91 @@
+body {
+    height: 100vh;
+    background: white;
+}
+.reselle_header {
+    width: 100%;
+    height: 14.8rem;
+    text-align: center;
+    background: url(../img/背景.png)no-repeat;
+    background-size: 100% 100%;
+    padding-top: 2rem;
+}
+
+.reselle_header p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.reselle_header h4 {
+    font-size: 4.1rem;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 1px 2px 2px rgba(7, 124, 194, 0.67);
+    margin: 2rem 0 2.3rem 0;
+}
+
+.reselle_header i {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 1rem;
+}
+
+.reselle_header span {
+    display: inline-block;
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.resele_main {
+    margin-top: 5rem;
+}
+
+.reselle_uu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reselle_uu li {
+    width: 49%;
+    height: 8.5rem;
+    text-align: center;
+    padding: 1.5rem 0 0 0;
+    cursor: pointer;
+}
+
+.reselle_uu li p {
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+}
+
+.reselle_uu li:nth-child(1) {
+    border-right: 3px solid #F2F2F2;
+    border-bottom: 3px solid #F2F2F2;
+}
+
+.reselle_uu li:nth-child(2) {
+    border-bottom: 3px solid #F2F2F2;
+}
+
+.reselle_uu li:nth-child(4) {
+    border-left: 3px solid #F2F2F2;
+}
+
+.reselle_set {
+    display: inline-block;
+    width: 3.8rem;
+    height: 3.8rem;
+    background: url(../img/设置.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}

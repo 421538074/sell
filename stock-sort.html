@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存分类</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/stock-sort.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav">
+            <input type="text" placeholder=" 搜索关键字">
+        </div>
+
+        <div class="nav_main">
+            <div class="nav_left">
+                <ul class="left_uu">
+                    <li class="active1">
+                        <span class="active">推荐</span>
+                    </li>
+                    <li>
+                        <span>热门</span>
+                    </li>
+                    <li>
+                        <span>男装</span>
+                    </li>
+                    <li>
+                        <span>女装</span>
+                    </li>
+                    <li>
+                        <span>童装</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_right">
+                <div class="tab_one" v-for="(item,index) in list">
+                    <h5>分类1</h5>
+                    <ul class="tab_uu">
+                        <li v-for="(item,index) in arr" @click="goSort">
+                            <img class="tab_img" src="img/设置.png" alt="">
+                            <p>分类1</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/stock-sort.js"></script>

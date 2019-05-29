@@ -1,0 +1,46 @@
+.content {
+    padding: 0 0.8rem 0 1.2rem;
+    background: white;
+}
+
+.content_uu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgba(51, 51, 51, 1);
+    padding: 1.2rem 0;
+}
+
+.content_uu li img {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 2rem;
+}
+
+.content_uu li:nth-child(1) {
+    padding: 1rem 0;
+}
+
+.content_wrap {
+    width: 100%;
+    display: flex;
+    line-height: 4.2rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.content_wrap span {
+    display: inline-block;
+    width: 50%;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 1);
+    height: 4.2rem;
+    background: #b5b5b5;
+    text-align: center;
+
+}
+
+.content_wrap span:nth-child(2) {
+    background: #0092FF;
+}

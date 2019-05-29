@@ -1,0 +1,74 @@
+.lower {
+    background: white;
+    padding-top: 1.1rem;
+}
+
+.lower_wrap {
+    text-align: center;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.search {
+    width: 80%;
+    height: 1.5rem;
+    background: rgba(237, 237, 237, 1);
+    border: 1px solid rgba(222, 222, 222, 1);
+    border-radius: 1.2rem;
+    padding: 0.4rem 1rem;
+    outline: none;
+}
+
+.search_img {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 2.8rem;
+}
+
+.lower_uu li {
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2rem;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.lower_uu li img {
+    width: 4.2rem;
+    height: 4.2rem;
+    background: rgba(0, 146, 255, 1);
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+.lower_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lower_text p {
+    font-size: 1.4rem;
+    color: rgba(51, 51, 51, 1);
+}
+
+.lower_right p {
+    text-align: right;
+    font-size: 1.4rem;
+    color: rgba(134, 134, 134, 1);
+}
+
+.lower_add {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background: url(../img/添加.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}

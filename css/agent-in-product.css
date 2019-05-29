@@ -1,0 +1,155 @@
+.nav_tag {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    background: white;
+}
+
+.nav_uu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_uu li {
+    width: 50%;
+    height: 100%;
+    line-height: 3rem;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+.nav_uu li span {
+    display: inline-block;
+    height: 98%;
+    color: #868686;
+    font-size: 1.4rem;
+}
+
+.active {
+    color: black !important;
+    border-bottom: 2px solid black;
+}
+
+
+
+/* 订单 */
+.nav_main {
+    margin-top: 3.2rem;
+}
+
+.nav_one {
+    background: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.nav_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem 0.5rem;
+    border-bottom: 1px solid #F2F2F2;
+    font-size: 1rem;
+}
+
+.nav_btn {
+    font-size: 1rem;
+    color: #868686;
+}
+
+.nav_mid {
+    padding: 1rem 1rem 0;
+}
+
+.mid_uu {
+    width: 100%;
+}
+
+.mid_uu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(248, 248, 248, 1);
+    margin-bottom: 0.5rem;
+}
+
+.mid_uu_left {
+    display: flex;
+}
+
+.mid_uu_left img {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(0, 146, 255, 1);
+}
+
+.mid_text {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    margin-left: 1rem;
+    color: rgba(51, 51, 51, 1);
+}
+
+p.money {
+    font-size: 1.5rem;
+    color: rgba(51, 51, 51, 1);
+    margin-right: 0.8rem;
+}
+
+/* 
+.mid_money {
+    padding: 0.9rem 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.mid_money p:nth-child(1) {
+    font-size: 1rem;
+    color: rgba(134, 134, 134, 1);
+}
+
+.mid_money p:nth-child(2) {
+    color: rgba(51, 51, 51, 1);
+    font-size: 1.4rem;
+} */
+
+.nav_foot {
+    padding: 0.7rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_foot p {
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+.foot_text {
+    display: flex;
+}
+
+.foot_text span {
+    display: block;
+    width: 6rem;
+    height: 2.1rem;
+    background: rgba(0, 146, 255, 1);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 2rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* .nav_add {
+    width: 5rem;
+    height: 5rem;
+    background: url(../img/添加.png)no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+} */

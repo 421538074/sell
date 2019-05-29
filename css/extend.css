@@ -1,0 +1,17 @@
+.extend {
+    text-align: center;
+    background: white;
+    height: 100vh;
+    width: 100%;
+}
+
+.wx_img {
+    width: 16rem;
+    height: 16rem;
+    margin: 9rem 0 6rem;
+}
+
+.extend p {
+    font-size: 1.8rem;
+    color: rgba(51, 51, 51, 1);
+}
