@@ -1,0 +1,12 @@
+html,body{
+    background: #ffffff;
+}
+h4 {
+    color: #3E3E3E;
+    text-align: center;
+    height: 5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

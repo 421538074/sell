@@ -1,0 +1,8 @@
+Vue.mixin({
+    methods: {
+        
+    },
+    filters:{
+
+    }
+})

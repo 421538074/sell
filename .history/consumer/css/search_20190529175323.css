@@ -1,0 +1,19 @@
+.search-bar-wrapper {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+input.search-input {
+    width: 90%;
+    border: none;
+    height: 60%;
+    border-radius: 10rem;
+    background-color: #F6F6F6;
+    text-align: center;
+    outline: 0;
+}
+input.search-inpug::-webkit-input-placeholder {
+    color: #A9B7CE;
+}

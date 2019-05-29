@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+html,body,div.content{
+    height: 100%;
+}
+div.content {
+    display: flex;
+    flex-direction: column;
+}
+div.search-bar-wrapper{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+input.search-input {
+    width: 90%;
+    border: none;
+    height: 60%;
+    border-radius: 0.1rem;
+    background: #F6F6F6;
+    outline: 0;
+}
+input::-webkit-input-placeholder {
+    color: #A9B7CE;
+    text-align: center;
+}
+.goods-classify-wrapper {
+    display: flex;
+    flex: 1;
+}
+ul.main-classify-wrapper {
+    overflow: scroll;
+    height: 100%;
+    width: 30%;
+}
+ul.main-classify-wrapper::-webkit-scrollbar,div.sub-classify-wrapper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+li.main-classify-item {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #fff;
+    margin-bottom: 1px;
+    color: #3E3E3E;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+li.main-classify-item.active {
+    background: #F6F6F6;
+    position: relative;
+    color: #000000;
+}
+li.main-classify-item.active::after{
+    content: '';
+    position: absolute;
+    background: #FFD162;
+    height: 80%;
+    width: 5px;
+    left: 0;
+    top: 10%;
+}
+.sub-classify-wrapper {
+    flex: 1;
+    background: #F6F6F6;
+    overflow: scroll;
+}
+img.classify-item-icon {
+    width: 19vw;
+    height: 19vw;
+    border-radius: 0.2rem;
+}
+p.sub-classify-item-title {
+    font-size: 1.4rem;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    color: #3E3E3E;
+    padding-left: 3vw;
+}
+.sub-classify-item{
+    width: 70vw;
+}
+.sub-sub-classify-item {
+    width: calc(68vw / 3);
+    margin-bottom: 1rem;
+}
+.sub-classify-item-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 1vw;
+}
+p.classify-title {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    margin-top: 1rem;
+}

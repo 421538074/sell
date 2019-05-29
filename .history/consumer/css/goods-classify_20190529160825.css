@@ -1,0 +1,13 @@
+div.search-bar-wrapper{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input.search-input {
+    width: 90%;
+    border: none;
+    height: 80%;
+    border-radius: 0.1rem;
+    background: #F6F6F6;
+}
