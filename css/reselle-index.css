@@ -2,6 +2,7 @@ body {
     height: 100vh;
     background: white;
 }
+
 .reselle_header {
     width: 100%;
     height: 14.8rem;
@@ -46,36 +47,6 @@ body {
     margin-top: 5rem;
 }
 
-.reselle_uu {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.reselle_uu li {
-    width: 49%;
-    height: 8.5rem;
-    text-align: center;
-    padding: 1.5rem 0 0 0;
-    cursor: pointer;
-}
-
-.reselle_uu li p {
-    font-size: 1.2rem;
-    margin-top: 1.8rem;
-}
-
-.reselle_uu li:nth-child(1) {
-    border-right: 3px solid #F2F2F2;
-    border-bottom: 3px solid #F2F2F2;
-}
-
-.reselle_uu li:nth-child(2) {
-    border-bottom: 3px solid #F2F2F2;
-}
-
-.reselle_uu li:nth-child(4) {
-    border-left: 3px solid #F2F2F2;
-}
 
 .reselle_set {
     display: inline-block;
@@ -88,4 +59,28 @@ body {
     bottom: 1rem;
     right: 1rem;
     cursor: pointer;
+}
+
+.weui-grid__icon+.weui-grid__label {
+    margin-top: 1.4rem !important;
+}
+
+.weui-grids:before {
+    border: 0 !important;
+}
+
+.weui-grid:nth-child(1) {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.weui-grid:nth-child(2) {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.weui-grid:nth-child(3) {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.weui-grid:after {
+    border: 0 !important;
 }

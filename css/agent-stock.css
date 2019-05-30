@@ -1,4 +1,5 @@
 .stock_nav {
+    padding: 0 0.8rem 0 0.5rem;
     background: white;
 }
 
@@ -13,14 +14,14 @@
 
 .nav_mid {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
 .nav_img {
-    width: 5rem;
-    height: 5rem;
-    margin: 0 1.4rem 0 0;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: 0 1.4rem 0 0.75rem;
 }
 
 .nav_uu li {
@@ -108,44 +109,4 @@
     position: absolute;
     bottom: 4%;
     left: 5%;
-}
-
-.stock_bot {
-    width: 17rem;
-    height: 3.3rem;
-    position: fixed;
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, -3%);
-}
-
-.radio_img {
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-right: 1.2rem;
-}
-
-
-
-
-
-/* 插件 */
-.weui-cell {
-    padding: 0 !important;
-}
-
-
-.weui-swiped-btn {
-    width: 50%;
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide-span {
-    display: inline;
-    width: 78%;
 }

@@ -2,6 +2,9 @@ var xm = new Vue({
     el: "#app",
     data: {
         isshade: false,
+        isRadio: true,
+        isshow: true,
+        postIndex: -1,
         list: [
             { status: "下架" },
             { status: "上架" },
@@ -10,24 +13,10 @@ var xm = new Vue({
             { status: "上架" }],
     },
     methods: {
-        share() {
-            this.isshade = true
+        select(index) {
+            this.postIndex = this.postIndex == index ? -1 : index
+            // this.isRadio = !this.isRadio
         },
-        shareWX() {
-            alert("微信")
-        },
-        shareQQ() {
-            alert("QQ")
-        },
-        shareLJ() {
-            alert("链接")
-        },
-        close() {
-            this.isshade = false
-        },
-        goDetail() {
-            window.location.href = "product-detail.html"
-        }
     },
 
 });

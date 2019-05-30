@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存管理</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/stock.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="stock_nav">
+            <div class="nav_wrap" v-for="(item,index) in list">
+                <div class="nav_mid" @click="goDetail">
+                    <img class="nav_img" src="img/雷姆.jpg" alt="">
+                    <ul class="nav_uu">
+                        <li>
+                            <span class="pro_name">商品名</span>
+                            <span class="pro_stuts">上架</span>
+                        </li>
+                        <li>
+                            <span>¥200</span>
+                            <span style="color: #868686; margin: 0 1.5rem;">库存：213</span>
+                            <span style="color: #868686;">销售状态：正常</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <span class="up" @click="share">分享</span>
+            </div>
+        </div>
+
+        <div class="shade" v-show="isshade">
+            <div class="share">
+                <span @click="shareWX"></span>
+                <span @click="shareQQ"></span>
+                <span @click="shareLJ"></span>
+                <span @click="close"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/stock.js"></script>

@@ -10,7 +10,7 @@ var xm = new Vue({
             window.location.href = "service-detail.html"
         },
         goSort(){
-            window.location.href = "agent-stock.html"
+            window.location.href = "stock.html"
         }
     },
 

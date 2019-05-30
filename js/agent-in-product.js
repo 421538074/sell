@@ -17,13 +17,15 @@ var xm = new Vue({
             }
         },
         // 反馈
-        feedback(text) {
-            if (text == "反馈") {
-                window.location.href = "feedback.html"
-            } else {
-                window.location.href = "look-feedback.html"
-            }
-
+        // feedback(text) {
+        //     if (text == "反馈") {
+        //         window.location.href = "feedback.html"
+        //     } else {
+        //         window.location.href = "look-feedback.html"
+        //     }
+        // },
+        lookLog() {
+            window.location.href = "logistics.html"
         }
     },
 

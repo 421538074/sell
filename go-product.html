@@ -15,10 +15,13 @@
         <div class="nav_tag">
             <ul class="nav_uu">
                 <li>
-                    <span @click="tab(0)" :class="{active:cur==0}">待接收</span>
+                    <span @click="tab(0)" :class="{active:cur==0}">代发货</span>
                 </li>
                 <li>
-                    <span @click="tab(1)" :class="{active:cur==1}">已完成</span>
+                    <span @click="tab(1)" :class="{active:cur==1}">已发货</span>
+                </li>
+                <li>
+                    <span @click="tab(2)" :class="{active:cur==2}">已完成</span>
                 </li>
             </ul>
         </div>
@@ -30,7 +33,7 @@
                         <img src="img/雷姆.jpg" alt="">
                         <p>张三</p>
                     </div>
-                    <p class="nav_btn">待接收</p>
+                    <p class="nav_btn">订单编号：2141351343</p>
                 </div>
 
                 <div class="nav_mid">
@@ -47,20 +50,19 @@
                         </li>
                     </ul>
                     <div class="mid_money">
-                        <p>快递费：¥21.00</p>
+                        <p>2019-02-04 21:21:12</p>
                         <p>总计：¥231.42</p>
                     </div>
                 </div>
 
-                <div class="nav_foot">
-                    <p>订单编号：2141351343</p>
-                    <p>2019-02-04 21:21</p>
+                <div class="nav_foot" @click="add_product">
+                    <p>立即发货</p>
                 </div>
 
             </div>
         </div>
         <!-- 添加 -->
-        <span class="nav_add" @click="add_product"></span>
+        <!-- <span class="nav_add" @click="add_product"></span> -->
     </div>
 </body>
 
