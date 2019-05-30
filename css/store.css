@@ -1,0 +1,52 @@
+.room {
+    width: 100%;
+    background: white;
+}
+
+.room_uu {
+    /* padding: 1rem; */
+}
+
+.room_uu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.room_wrap {
+    display: flex;
+}
+
+.room_wrap img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.5rem;
+}
+
+.room_one {
+    font-size: 1.5rem;
+    color: rgba(51, 51, 51, 1);
+}
+
+.room_one p:nth-child(2) {
+    color: #868686;
+    margin-top: 2.2rem;
+}
+
+.room_next {
+    width: 0.7rem;
+    height: 1.1rem;
+}
+
+.add_img {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    background: url(../img/添加.png)no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}

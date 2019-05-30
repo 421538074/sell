@@ -1,8 +1,6 @@
 var xm = new Vue({
     el: "#app",
     data: {
-        isshade: false,
-        isshow: true,
         list: [
             { status: "下架" },
             { status: "上架" },
@@ -21,11 +19,8 @@ var xm = new Vue({
             }
             console.log(this.isAdd)
         },
-        cutChange() {
-            this.isshow = !this.isshow
-        },
-        goSelect() {
-            window.location.href = "select-room.html"
+        cutChange(){
+            this.isshow=!this.isshow
         }
     },
 

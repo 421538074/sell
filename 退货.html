@@ -332,69 +332,31 @@
 
 <body>
     <div id="app">
-        <div class="wrap">
-            <div class="nav_tab">
-                <ul class="myTab">
-                    <li @click="tab(0)">
-                        <span :class="{active:cur==0}">订单发货</span>
-                    </li>
-                    <li @click="tab(1)">
-                        <span :class="{active:cur==1}">退货管理</span>
-                    </li>
-                    <li @click="tab(2)">
-                        <span :class="{active:cur==2}">订单反馈</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 内容/订单发货 -->
-            <div class="nav_one" v-show="hide">
-                <div class="order" v-for="(item,index) in order">
-                    <div class="order_left">
-                        <p>订单编号：faf214134</p>
-                        <p>2019-03-03 12:12:12</p>
+        <template>
+            <div id="leftBar">
+                <div class="part">
+                    <div>产品：</div>
+                    <div style="width: 87%;">
+                        <!--"全部"是否选择，选择则展示class -->
+                        <button id="product" :class="this.productSelected?'productStyle':'item'"
+                            @click="selectProduct()">全部</button>
+                        <button id="aProduct" class="productStyleHighLight" @click="selectAProducts()">A</button>
+                        <button id="cProduct" class="productStyleHighLight" @click="selectCProducts()">C</button>
+                        <br>
+                        <input type="button" class="item" v-for="(aProduct,index) in A" :value="aProduct.value"
+                            :key="aProduct.name" @click="selectAProduct(index)"
+                            :class="aProduct.selected?'productStyle':''">
+                        <br>
+                        <input type="button" class="item" v-for="(cProduct,index) in C" @click="selectCProduct(index)"
+                            :value="cProduct.value" :key="cProduct.name" :class="cProduct.selected?'productStyle':''">
+                        <br>
+                        <input type="button" class="item" v-for="(eProduct,index) in elseProduct"
+                            @click="selectEProduct(index)" :value="eProduct.value" :key="eProduct.name"
+                            :class="eProduct.selected?'productStyle':''">
                     </div>
-                    <p class="order_name">收件人：张三</p>
-                </div>
-
-                <span class="order_btn" @click="addOrder"></span>
-            </div>
-
-          
-
-            <!-- 订单反馈 -->
-            <div class="nav_three">
-                <div class="order_feed clearfix">
-                    <div class="orderFeed_top">
-                        <p>张三</p>
-                        <p style="color: #868686">订单编号：kR124124179</p>
-                    </div>
-                    <p class="orderFeed_text">反馈内容反馈内容反馈内容反馈内容反馈内容反馈内容 反馈内容反馈内容反馈内容反</p>
-
-                    <div class="orderFeed_bot" v-show="!isreply">
-                        <h5>回复内容</h5>
-                        <textarea placeholder="请输入回复内容" id="feed-title"></textarea>
-                    </div>
-                    <span class="feed_reply" v-show="isreply" @click="openReply">回复</span>
-                    <span class="feed_reply_one" v-show="!isreply">回复</span>
                 </div>
             </div>
-        </div>
-        <!-- 弹框 -->
-        <div class="shade" v-if="isshade">
-            <div class="box">
-                <p>确定退款？</p>
-                <p>确定之后不可再次更改哦！</p>
-                <ul class="box_ul">
-                    <li @click="close">
-                        <span class="box_ul_no">取消</span>
-                    </li>
-                    <li @click="ok">
-                        <span>确定</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </template>
 
     </div>
 
@@ -413,48 +375,215 @@
 
     var xm = new Vue({
         el: "#app",
-        data: {
-            isshade: false,
-            isrefund: false,
-            isreply: true,
-            hide:false,
-            cur: 0,
-            order: [{}, {}, {}],
-            chatList: [{}, {}, {}],
-            // list: [
-            //     { feed: "反馈" },
-            //     { feed: "查看反馈" },
-            //     { feed: "反馈" },],
-        },
-        methods: {
-            tab(t) {
-                this.cur = t
-            },
-            // 反馈
-            feedback(text) {
-                if (text == "反馈") {
-                    window.location.href = "feedback.html"
-                } else {
-                    window.location.href = "look-feedback.html"
-                }
-            },
-            // 添加订单
-            addOrder() {
-                window.location.href = "add-order.html"
-            },
-            noAgree() {
-                this.isrefund = true
-            },
-            agree() {
-                this.isshade = true
-            },
-            close() {
-                this.isshade = false
-            },
-            openReply() {
-                this.isreply = !this.isreply
+        data() {
+            return {
+                //产品 “全部”是否被选中
+                productSelected: true,
+                //产品集合
+                productMap: new Map(),
+                //A类产品
+                A: [
+                    {
+                        name: 'apple',
+                        value: '苹果',
+                        selected: false
+                    },
+                    {
+                        name: 'banana',
+                        value: '香蕉',
+                        selected: false
+                    },
+                    {
+                        name: 'orange',
+                        value: '橘子',
+                        selected: false
+                    },
+                    {
+                        name: 'watermelon',
+                        value: '西瓜',
+                        selected: false
+                    }],
+                //C类产品
+                C: [
+                    {
+                        name: 'milk',
+                        value: '牛奶',
+                        selected: false
+                    },
+                    {
+                        name: 'Bread',
+                        value: '面包',
+                        selected: false
+                    },
+                    {
+                        name: 'salt',
+                        value: '盐',
+                        selected: false
+                    },
+                    {
+                        name: 'wheat',
+                        value: '小麦',
+                        selected: false
+                    },
+                    {
+                        name: 'rice',
+                        value: '大米',
+                        selected: false
+                    },
+                    {
+                        name: 'soy',
+                        value: '酱油',
+                        selected: false
+                    }],
+                //其他类产品
+                elseProduct: [
+                    {
+                        name: 'else',
+                        value: '其他',
+                        selected: false
+                    }],
             }
         },
+        methods: {
+            //点击全部产品
+            selectProduct: function () {
+                this.productSelected = true;
+                //取消产品的选中
+                this.A.forEach(function (r) {
+                    r.selected = false;
+                });
+                this.C.forEach(function (c) {
+                    c.selected = false;
+                });
+                this.elseProduct.forEach(function (e) {
+                    e.selected = false;
+                });
+                //整合数据
+                this.mergeCondition();
+            }
+        },
+        //点击A
+        selectAProducts: function () {
+            this.productSelected = false;
+            //清理数据，包括productMap中的数据，以及将所有产品的选中状态取消
+            this.clearProductMap();
+            var productMap2 = this.productMap;
+            this.A.forEach(function (a) {
+                a.selected = true;
+                productMap2.set(a.name, a.value)
+            });
+            // this.productMap = productMap2;
+            //整合数据
+            this.mergeCondition();
+        },
+        //点击C
+        selectCProducts: function () {
+            this.productSelected = false;
+            //清理数据，包括productMap中的数据，以及将所有产品的选中状态取消
+            this.clearProductMap();
+            var productMap2 = this.productMap;
+            this.C.forEach(function (c) {
+                c.selected = true;
+                productMap2.set(c.name, c.value)
+            });
+            this.productMap = productMap2;
+            //整合数据
+            this.mergeCondition();
+        },
 
+        //A类产品被点击时
+        selectAProduct: function (index) {
+            this.A[index].selected = !this.A[index].selected;
+            if (this.A[index].selected) {
+                //点击时，若刚开始是全部状态，则删除全部数据，只添加点击的那个
+                if (this.productSelected) {
+                    this.productMap.clear();
+                }
+                this.productMap.set(this.A[index].name, this.A[index].value);
+                //有其他产品选中，取消"全部"的选中效果
+                this.productSelected = false;
+            } else {
+                this.productMap.delete(this.A[index].name);
+            }
+            //整合数据
+            this.mergeCondition();
+        },
+        //C类产品被点击时
+        selectCProduct: function (index) {
+            this.C[index].selected = !this.C[index].selected;
+            //若是选中状态
+            if (this.C[index].selected) {
+                //点击时，若刚开始是全部状态，则删除全部数据，只添加点击的那个
+                if (this.productSelected) {
+                    this.productMap.clear();
+                }
+                this.productMap.set(this.C[index].name, this.C[index].value)
+                this.productSelected = false;
+                //全部的那一个按钮选中
+            } else {
+                this.productMap.delete(this.C[index].name);
+            }
+            //整合数据
+            this.mergeCondition();
+        },
+        //else类产品被点击时
+        selectEProduct: function (index) {
+            this.elseProduct[index].selected = !this.elseProduct[index].selected;
+            if (this.elseProduct[index].selected) {
+                //点击时，若刚开始是全部状态，则删除全部数据，只添加点击的那个
+                if (this.productSelected) {
+                    this.productMap.clear();
+                }
+                this.productMap.set(this.elseProduct[index].name, this.elseProduct[index].value);
+                this.productSelected = false;
+            }
+            else {
+                // this.productSelected=false;
+                this.productMap.delete(this.elseProduct[index].name);
+            }
+            //整合数据
+            this.mergeCondition();
+        },
+
+        //清除数据
+        clearProductMap: function () {
+            // if(this.productSelected){
+            //清空productMap数据
+            this.productMap.clear();
+            // }
+            //取消选中
+            this.A.forEach(function (r) {
+                r.selected = false;
+            });
+            this.C.forEach(function (c) {
+                c.selected = false;
+            });
+            this.elseProduct.forEach(function (e) {
+                e.selected = false;
+            });
+        },
+        mergeCondition: function () {
+            //如果有的为空，则将“全部”置为true
+            if (this.productMap.size === 0) {
+                this.productSelected = true;
+            }
+            //防止不点击的时候没有数据
+            //如果"产品"被选中，则将所有产品放入map
+            if (this.productSelected) {
+                var productMap2 = this.productMap;
+                this.R.forEach(function (rProduct) {
+                    productMap2.set(rProduct.name, rProduct.value)
+                });
+                this.C.forEach(function (cProduct) {
+                    productMap2.set(cProduct.name, cProduct.value)
+                });
+
+                this.elseProduct.forEach(function (eProduct) {
+                    productMap2.set(eProduct.name, eProduct.value);
+                });//否则就将在前面组装好的map发给后台
+                //发送请求
+                console.log(this.productMap)
+            }
+        }
     });
 </script>

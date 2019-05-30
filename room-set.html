@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>门店设置</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/room-set.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="room_nav">
+            <ul class="room_uu">
+                <li>
+                    <span>门店名称</span>
+                    <input type="text" disabled  v-model="name">
+                </li>
+                <li>
+                    <span>门店地址</span>
+                    <input type="text" disabled v-model="adress">
+                </li>
+                <li>
+                    <span>营业时间</span>
+                    <input type="text" disabled v-model="time">
+                </li>
+                <li>
+                    <span>联系方式</span>
+                    <input type="text" disabled v-model="phone">
+                </li>
+                <li>
+                    <div class="room_one">
+                        <p>门店图片</p>
+                        <div class="room_one_wrap">
+                            <ul class="one_uu">
+                                <li> <img src="img/雷姆.jpg" alt=""></li>
+                                <li> <img src="img/雷姆.jpg" alt=""></li>
+                                <li> <img src="img/雷姆.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <span class="btn_one" @click="edit">修改门店</span>
+            <span class="btn_one">修改门店商品</span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/weui.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/room-set.js"></script>
