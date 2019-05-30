@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/regsiter.css">
+    <title>注册</title>
+</head>
+
+<body>
+    <div id="app" class="content">
+        <div class="regsiter">
+            <div class="regsiter_wrap">
+                <h4>注册</h4>
+                <ul class="regsiter_uu">
+                    <li>
+                        <label class="title">手机号</label>
+                        <input @input="limitLength('phone',11)" v-model="phone" maxlength="11" type="number"
+                            placeholder="输入账号">
+                    </li>
+                    <li>
+                        <label class="title">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                        <input class="pasword" v-model="password" type="password" placeholder="输入密码">
+                    </li>
+                    <li>
+                        <label class="title">验证码</label>
+                        <input class="pasword" v-model="code" type="number" placeholder="输入验证码">
+                        <button class="send-code">发送</button>
+                    </li>
+                </ul>
+                <button class="regsiter_btn" @click="regsiter">注册</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+</body>
+
+</html>

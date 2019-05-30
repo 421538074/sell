@@ -1,0 +1,10 @@
+div.search-input-wrapper{
+
+}
+input.search-input {
+    width: 90%;
+    border: none;
+    height: 80%;
+    border-radius: 0.1rem;
+    background: #F6F6F6;
+}

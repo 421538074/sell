@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/goods-classify.css">
+</head>
+<body>
+    <div id="app" class="content">
+        <div class="search-bar-wrapper">
+            <input placeholder="搜索关键字" type="text" class="search-input">
+        </div>
+        <div class="goods-classify-wrapper">
+            <ul class="main-classify-wrapper">
+                <li @click="triggerTab(n)" v-for="n in 20" :class="{active:n==currentIndex}" class="main-classify-item">
+                    死靓仔，一起打球吗？
+                </li>
+            </ul>
+            <div class="sub-classify-wrapper">
+                <div v-for="n in 5" class="sub-classify-item">
+                    <p class="sub-classify-item-title">
+                        分类
+                    </p>
+                    <div class="sub-classify-item-wrapper">
+                        <div v-for="n in 5" class="sub-sub-classify-item">
+                            <img src="../img/蕾姆.jpg" class="classify-item-icon">
+                            <p class="classify-title">分类名</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/goods-classify.js"></script>
+</body>
+</html>
