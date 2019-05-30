@@ -1,6 +1,7 @@
 var xm = new Vue({
     el: "#app",
     data: {
+        isTrue: true,
         name: "某某门店",
         adress: "南京市雨花台区小航路16号",
         time: "6:00～23:00",
@@ -9,19 +10,10 @@ var xm = new Vue({
     methods: {
         edit() {
             $(".room_uu li input").attr("disabled", false)
-            $(".room_uu li input").focus(function () {
-
-                //获取当前文本框的值
-
-                var curValue = $(this).val();
-
-                if (curValue == this.defaultValue) {
-
-                    // $(this).val("");
-
-                }
-
-            })
+            this.isTrue = !this.isTrue
+        },
+        editProduct() {
+            window.location.href = "room-product.html"
         }
     },
 

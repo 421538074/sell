@@ -5,7 +5,7 @@ var xm = new Vue({
     },
     methods: {
         addRoom() {
-            window.location.href = ""
+            window.location.href = "add-room.html"
         },
         goDetail() {
             window.location.href = "room-set.html"

@@ -1,0 +1,171 @@
+.stock_nav {
+    background: white;
+}
+
+.nav_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0 0.9rem;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.nav_mid {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav_img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1.4rem 0 0;
+}
+
+.nav_uu li {
+    font-size: 1.2rem;
+    color: rgba(51, 51, 51, 1);
+}
+
+.nav_uu li:nth-child(1) {
+    margin-bottom: 1.2rem;
+}
+
+.pro_name {
+    font-size: 1.5rem;
+    margin-right: 1.2rem;
+}
+
+.pro_stuts {
+    font-size: 1.2rem;
+    color: #0092FF;
+}
+
+.up {
+    padding: 0.3rem 0.91rem;
+    background: #0092ff;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* 遮罩 */
+.shade {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+}
+
+.share {
+    width: 95%;
+    height: 19.5rem;
+    background: url(../img/分享.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.share span:nth-child(1) {
+    display: inline-block;
+    width: 18%;
+    height: 25%;
+    position: absolute;
+    top: 32%;
+    left: 6%;
+}
+
+.share span:nth-child(2) {
+    display: inline-block;
+    width: 18%;
+    height: 25%;
+    position: absolute;
+    top: 32%;
+    left: 30%;
+}
+
+.share span:nth-child(3) {
+    display: inline-block;
+    width: 18%;
+    height: 25%;
+    position: absolute;
+    top: 32%;
+    right: 30%;
+}
+
+.share span:nth-child(4) {
+    display: inline-block;
+    width: 90%;
+    height: 17%;
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+}
+
+.stock_bot {
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+.stock_bot img{
+    width: 100%;
+    height: 100%;
+}
+
+.radio_img {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.img1 {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/选择.png)no-repeat;
+    background-size: 100% 100%;
+}
+
+.img2 {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/选中.png)no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+/* 插件 */
+.weui-cell {
+    padding: 0 !important;
+}
+
+
+.weui-swiped-btn {
+    width: 50%;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-span {
+    display: inline;
+    width: 78%;
+}
