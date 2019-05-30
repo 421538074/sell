@@ -12,10 +12,10 @@ new Vue({
             if(this.isInitSwiper) {
                 return;
             }
+            console.log('初始化了')
             this.isInitSwiper = true;
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
-                spaceBetween: 30,
                 loop: true,
                 autoplay: true,
                 navigation: {

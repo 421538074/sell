@@ -15,7 +15,7 @@ new Vue({
             this.isInitSwiper = true;
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 300,
                 loop: true,
                 autoplay: true,
                 navigation: {

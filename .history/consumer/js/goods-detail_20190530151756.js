@@ -2,22 +2,16 @@ new Vue({
     el: '#app',
     data() {
         return {
-            currentIndex: 0,
-            photoPreview: '',
-            isInitSwiper:false
+            currentIndex:0
         }
     },
     methods: {
         initSwiper() {
-            if(this.isInitSwiper) {
-                return;
-            }
-            this.isInitSwiper = true;
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
-                autoplay: true,
+                autoplay:true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -25,15 +19,16 @@ new Vue({
             });
         },
         initPhotoPreview() {
-            this.photoPreview = $.photoBrowser({
-                items: ["../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg"]
-            });
-        },
-        openPhotoPreview() {
-            this.photoPreview.open();
+            $.photoBrowser({
+                items: [
+                  "./images/swiper-1.jpg",
+                  "./images/swiper-2.jpg",
+                  "./images/swiper-3.jpg"
+                ]
+              });
         },
         switchTab(index) {
-            if (this.currentIndex != index) {
+            if(this.currentIndex != index) {
                 this.currentIndex = index;
             }
         }
@@ -41,7 +36,6 @@ new Vue({
     mounted() {
         this.$nextTick(() => {
             this.initSwiper();
-            this.initPhotoPreview();
         });
     },
 });

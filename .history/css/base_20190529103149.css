@@ -137,7 +137,7 @@ table {
 
 body,
 html {
-    font-size: calc(100vw / 37.5) !important;
+    font-size: calc(100vw / 37.5);
     font-family: PingFangSC-Medium;
     background: #F2F2F2;
 }

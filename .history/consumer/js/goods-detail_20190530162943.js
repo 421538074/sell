@@ -15,9 +15,10 @@ new Vue({
             this.isInitSwiper = true;
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 0,
+                speed: 400,
                 loop: true,
-                autoplay: true,
+                // autoplay: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',

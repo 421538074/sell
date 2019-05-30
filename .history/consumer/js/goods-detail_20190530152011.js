@@ -3,16 +3,11 @@ new Vue({
     data() {
         return {
             currentIndex: 0,
-            photoPreview: '',
-            isInitSwiper:false
+            photoPreview: ''
         }
     },
     methods: {
         initSwiper() {
-            if(this.isInitSwiper) {
-                return;
-            }
-            this.isInitSwiper = true;
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
                 spaceBetween: 30,

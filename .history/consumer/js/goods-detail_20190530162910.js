@@ -16,6 +16,7 @@ new Vue({
             new Swiper('.swiper-container', {
                 slidesPerView: 1,
                 spaceBetween: 30,
+                speed: 4000,
                 loop: true,
                 autoplay: true,
                 navigation: {

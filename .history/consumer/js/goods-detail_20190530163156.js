@@ -30,6 +30,7 @@ new Vue({
             });
         },
         openPhotoPreview() {
+            console.log('打开')
             this.photoPreview.open();
         },
         switchTab(index) {
