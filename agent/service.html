@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>售后反馈</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/service.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav_tag">
+            <ul class="nav_uu">
+                <li>
+                    <span @click="tab(0)" :class="{active:cur==0}">订单反馈</span>
+                </li>
+                <li>
+                    <span @click="tab(1)" :class="{active:cur==1}">退货管理</span>
+                    <i class="dist"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 订单反馈 -->
+        <div class="lower" v-show="!hide">
+            <ul class="lower_uu">
+                <li v-for="(item,index) in arr" @click="serviceDetail()">
+                    <img src="../img/雷姆.jpg" alt="">
+                    <div class="lower_right">
+                        <div class="lower_info">
+                            <p>张三</p>
+                            <p>订单编号：af124214231</p>
+                        </div>
+                        <p class="info">订单反馈：这个商品怎么不对啊</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 退货管理 -->
+        <div class="nav_two" v-show="hide">
+            <div class="refunds" v-for="(item,index) in chatList">
+                <ul class="refunds_uu">
+                    <li>
+                        <div class="uu-box">
+                            <span>张三</span>
+                            <span style="color: #868686">订单编号：kR124124179</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uu-box">
+                            <span>退货原因</span>
+                            <span style="color: #868686">商品与图不符</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uu-three">
+                            <h5>具体内容</h5>
+                            <p>商品买回来根本就不是我想要的样子</p>
+                            <ul class="uu-img">
+                                <li><img src="../img/雷姆.jpg" alt=""></li>
+                                <li><img src="../img/雷姆.jpg" alt=""></li>
+                                <li><img src="../img/雷姆.jpg" alt=""></li>
+                                <li><img src="../img/雷姆.jpg" alt=""></li>
+                                <li><img src="../img/雷姆.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 拒绝退货 -->
+                    <li v-show="isrefund">
+                        <div class="no-uu">
+                            <h5>拒绝原因</h5>
+                            <textarea name="" id="noRefund"></textarea>
+                            <p>确定</p>
+                        </div>
+                    </li>
+                    <li v-show="!isrefund">
+                        <div class="uu-for">
+                            <span @click="noAgree">拒绝退货</span>
+                            <span @click="agree">同意退货</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 弹框 -->
+        <div class="shade" v-if="isshade">
+            <div class="box">
+                <p>确定退款？</p>
+                <p>确定之后不可再次更改哦！</p>
+                <ul class="box_ul">
+                    <li @click="close">
+                        <span class="box_ul_no">取消</span>
+                    </li>
+                    <li @click="ok">
+                        <span>确定</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/service.js"></script>

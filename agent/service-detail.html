@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>售后反馈</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/service-detail.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="service">
+            <div class="service_wrap">
+                <p>张三</p>
+                <p>订单编号：af124214231</p>
+            </div>
+
+            <!-- 回复 -->
+            <div class="reply">
+                <h4>订单反馈</h4>
+                <p class="title">这个商品怎么不对啊，没有什么什么什么什么什么</p>
+                <ul class="reply_uu">
+                    <li v-for="item in int">
+                        <img src="../img/雷姆.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="reply">
+                <h4>回复</h4>
+                <p class="title">商品没有问题的，就是这个样子的</p>
+            </div>
+        </div>
+
+        <div class="service_foot">
+            <input type="text" placeholder="输入你想回复的内容">
+            <span class="speak">回复</span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/service-detail.js"></script>

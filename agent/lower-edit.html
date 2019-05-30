@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下级管理</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/lower-edit.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="content">
+            <ul class="content_uu">
+                <li>
+                    <span>分销商头像</span>
+                    <img :src="avter" alt="">
+                </li>
+                <li>
+                    <span>分销商名称</span>
+                    <input type="text" v-model="name">
+                </li>
+                <li>
+                    <span>分销商联系方式</span>
+                    <input type="text" v-model="phone">
+                </li>
+                <li>
+                    <span>地区</span>
+                    <input type="text" v-model="address">
+                </li>
+                <li>
+                    <span>账号</span>
+                    <input type="text" v-model="nickname">
+                </li>
+                <li>
+                    <span>实体店地址</span>
+                    <input type="text" v-model="site">
+                </li>
+            </ul>
+        </div>
+
+        <span class="content_btn">确定</span>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/lower-edit.js"></script>
