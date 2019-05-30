@@ -1,0 +1,4 @@
+.goods-pictures-wrapper ,.swiper-container{
+    max-height: 30vh;
+    overflow: hidden;
+}

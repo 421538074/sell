@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <div class="search-bar-wrapper">
+            <img @click="back()" src="../img/back.png" class="back-icon">
+            <input v-model="keywords" placeholder="产品名称" type="text" class="search-input">
+            <img @click="clearInput" v-show="isShowClearIcon" src="../img/close.png" class="clear-icon">
+            <span class="serach-title">搜索</span>
+        </div>
+        <div class="search-result-wrapper">
+            <div v-for="n in 20" class="search-goods-item">
+                <img src="../img/1.jpg" class="goods-item-icon">
+                <p class="goods-title">商品名称</p>
+                <p class="sell-counts">销量：123</p>
+                <p class="price-wrapper">
+                    <span class="current-price">￥111</span>
+                    <span class="original-price">￥120</span>
+                </p>
+                <p class="shop-title">店铺名称</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
