@@ -1,0 +1,26 @@
+.goods-pictures-wrapper ,.swiper-container{
+    max-height: 30vh;
+    overflow: hidden;
+}
+img.slide-img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-button-next, .swiper-button-prev,
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    outline: 0;
+}
+.goods-detail-wrapper {
+    margin-top: 0.5rem;
+    background: #ffffff;
+}
+p.main-title-wrapper {
+    color: #3E3E3E;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img.share-action-icon {
+    width: 2rem;
+}

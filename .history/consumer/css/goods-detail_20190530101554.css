@@ -1,0 +1,8 @@
+.goods-pictures-wrapper ,.swiper-container{
+    max-height: 30vh;
+    overflow: hidden;
+}
+img.slide-img{
+    width: 100%;
+    height: 100%;
+}
