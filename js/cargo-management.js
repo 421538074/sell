@@ -1,7 +1,7 @@
 var xm = new Vue({
     el: "#app",
     data: {
-        arr: [{}, {}, {},{}, {}, {},{}, {}, {},],
+        arr: [{}, {}, {}, {}, {}, {}, {}, {}, {},],
         list: [{}, {}, {},],
     },
     methods: {
@@ -9,8 +9,13 @@ var xm = new Vue({
         serviceDetail() {
             window.location.href = "service-detail.html"
         },
-        goSort(){
-            window.location.href = "stock.html"
+        goSort() {
+            if (getUrlKey("id") == 1) {
+                window.location.href = "product-save.html"
+            } else {
+                window.location.href = "stock.html"
+            }
+
         }
     },
 
