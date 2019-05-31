@@ -1,12 +1,18 @@
-*{
+* {
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     background: #f6f6f6;
 }
-html,body,div.content{
+
+html,
+body,
+div.content {
     height: 100%;
 }
+
 /*底部菜单栏*/
 nav.tool-bar-wrapper {
     height: 5rem;
@@ -14,7 +20,11 @@ nav.tool-bar-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
+
 a.nav-item {
     color: #888888;
     text-decoration: none;
@@ -25,18 +35,22 @@ a.nav-item {
     justify-content: space-around;
     height: 90%;
 }
-a.nav-item.active{
+
+a.nav-item.active {
     color: #0093FF;
 }
-img.nav-item-icon{
+
+img.nav-item-icon {
     width: 1.5rem;
     height: 1.5rem;
 }
-.ellipsis{
+
+.ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /*顶部返回栏 */
 nav.nav-bar-wrapper {
     background: #FFFFFF;
@@ -51,6 +65,7 @@ nav.nav-bar-wrapper {
     font-size: 1.6rem;
     color: #426196;
 }
+
 img.back-icon {
     position: absolute;
     width: 1rem;

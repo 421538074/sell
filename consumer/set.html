@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/set.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">设置</p>
+        </nav>
+        <div class="set_nav">
+            <ul class="nav_uu">
+                <li>
+                    <span>头像修改</span>
+                    <div class="lis_box">
+                        <img src="../img/雷姆.jpg" alt="" class="uu_img">
+                        <img src="../img/arrow-right.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <span>昵称设置</span>
+                    <div class="lis_box" @click="editName">
+                        <span>pzhkj</span>
+                        <img src="../img/arrow-right.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <span>手机号绑定</span>
+                    <div class="lis_box" @click="editPhone">
+                        <span></span>
+                        <img src="../img/arrow-right.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <span>修改密码</span>
+                    <div class="lis_box" @click="editPassword">
+                        <span></span>
+                        <img src="../img/arrow-right.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <span>意见反馈</span>
+                    <div class="lis_box" @click="editIdea">
+                        <span></span>
+                        <img src="../img/arrow-right.png" alt="">
+                    </div>
+                </li>
+                <li class="lis_befor">
+                    退出登录
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/set.js"></script>
+</body>
+
+</html>

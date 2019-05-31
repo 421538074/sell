@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/upgrade.css">
+    <link rel="stylesheet" href="../css/weui.min.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">升级分销</p>
+        </nav>
+
+        <div class="up_main">
+            <ul class="up_uu">
+                <li>
+                    <span>用户名</span>
+                    <input type="text" placeholder="请输入用户名">
+                </li>
+                <li>
+                    <span>手机号</span>
+                    <input type="number" placeholder="请输入手机号">
+                </li>
+                <li>
+                    <span>微信号</span>
+                    <input type="text" placeholder="请输入微信号">
+                </li>
+                <li>
+                    <span>真实姓名</span>
+                    <input type="text" placeholder="请输入真实姓名">
+                </li>
+                <li>
+                    <span>户籍所在地</span>
+                    <input type="text" placeholder="请输入户籍所在地">
+                </li>
+                <li>
+                    <span>现住址</span>
+                    <input type="text" placeholder="请输入现住址">
+                </li>
+                <li>
+                    <span>分享号</span>
+                    <p>升级后自动显示分享号/<span style="color: #A9B7CE;">未升级会员</span></p>
+                    <!-- <input type="text" placeholder="升级后自动显示分享号/未升级会员"> -->
+                </li>
+                <li>
+                    <span>开户行</span>
+                    <input type="text" placeholder="编辑开户行">
+                </li>
+            </ul>
+
+            <div class="role" style="padding-left: 1rem;">
+                <img src="../img/正面.png" alt="">
+                <input type="file" hidden>
+                <img src="../img/反面.png" alt="">
+                <input type="file" hidden>
+            </div>
+
+            <span class="role_btn">提交</span>
+        </div>
+
+
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/upgrade.js"></script>
+    <script src="../js/weui.min.js"></script>
+</body>
+
+</html>

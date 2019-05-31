@@ -1,0 +1,60 @@
+.content {
+    padding: 5rem 0 0 0;
+}
+
+.up_main {
+    margin-top: 0.5rem;
+}
+
+.up_uu li {
+    padding: 1.2rem 0 1.2rem 1rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 1);
+    line-height: 1.8rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.up_uu li span {
+    width: 25%;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 1);
+}
+
+.up_uu li input {
+    width: 70%;
+    outline: none;
+    border: 0;
+    color: #5A6F93
+}
+
+.up_uu li input::placeholder {
+    color: #5A6F93
+}
+
+.up_uu li:nth-child(7) {
+    margin-top: 0.6rem;
+}
+
+.role img {
+    display: inline-block;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 4px;
+    margin: 0.85rem 0.5rem;
+}
+
+.role_btn {
+    display: block;
+    width: 90%;
+    height: 3.2rem;
+    background: rgba(0, 147, 255, 1);
+    border-radius: 1.7rem;
+    text-align: center;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 1);
+    margin: 2.5rem auto 0;
+}
