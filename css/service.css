@@ -18,6 +18,7 @@
     height: 100%;
     line-height: 3rem;
     border-bottom: 2px solid #F2F2F2;
+    position: relative;
 }
 
 .nav_uu li span {
@@ -279,4 +280,15 @@
 
 .box_ul_no {
     border-right: 1px solid #DEDEDE;
+}
+
+.dist {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    background: rgba(250, 91, 88, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 25%;
 }

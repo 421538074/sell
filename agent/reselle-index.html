@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/reselle-index.css">
+    <link rel="stylesheet" href="../css/weui.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="reselle_header">
+            <p>今日收入</p>
+            <h4><i>¥</i>20000</h4>
+            <span @click="Gomoney">查看明细</span>
+        </div>
+
+
+        <div class="weui-grids resele_main">
+            <a href="go-product.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/1.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    出货管理
+                </p>
+            </a>
+            <a href="cargo-management.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/2.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    货物管理
+                </p>
+            </a>
+            <a href="in-product.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/3.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    进货订单
+                </p>
+            </a>
+            <a href="lower-level.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/4.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    下级管理
+                </p>
+            </a>
+            <a href="store.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/5.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    门店管理
+                </p>
+            </a>
+            <a href="service.html" class="weui-grid js_grid">
+                <div class="weui-grid__icon">
+                    <img src="../img/6.png" alt="">
+                </div>
+                <p class="weui-grid__label">
+                    售后反馈
+                </p>
+
+                <span class="box"></span>
+            </a>
+        </div>
+
+        <!-- <div class="resele_main">
+            <ul class="reselle_uu">
+                <li @click="Goproduct">
+                    <img src="img/出货.png" alt="" style="width: 3.25rem">
+                    <p>出货管理 </p>
+                </li>
+                <li @click="Inproduct">
+                    <img src="img/货物.png" alt="" style="width: 3.3rem">
+                    <p>货物管理</p>
+                </li>
+                <li @click="Lower">
+                    <img src="img/下级管理.png" alt="" style="width: 3.8rem">
+                    <p>下级管理</p>
+                </li>
+                <li @click="service">
+                    <img src="img/售后.png" alt="" style="width: 3rem">
+                    <p>售后反馈</p>
+                </li>
+            </ul>
+        </div> -->
+
+        <span class="reselle_set" @click="Goset"></span>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/weui.min.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/reselle-index.js"></script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存管理</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/room-product.css">
+    <link rel="stylesheet" href="../css/weui.min.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="stock_nav">
+            <div class="weui-cell weui-cell_swiped" v-for="(item,index) in list" >
+                <div class="weui-cell__bd">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd nav_mid">
+                            <img class="nav_img" src="../img/雷姆.jpg" alt="">
+                            <ul class="nav_uu">
+                                <li>
+                                    <span class="pro_name">商品名</span>
+                                    <span class="pro_stuts">上架中</span>
+                                </li>
+                                <li>
+                                    <span>¥200</span>
+                                    <span style="color: #868686; margin: 0 1.5rem;">库存：213</span>
+                                    <span style="color: #868686;">销售状态：正常</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="weui-cell__ft"></div>
+                    </div>
+                </div>
+                <div class="weui-cell__ft">
+                    <a class="weui-swiped-btn weui-swiped-btn_warn delete-swipeout" href="javascript:">删除</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="stock_bot">
+            <img src="../img/添加.png" alt=""  @click="addChange">
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/weui.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/room-product.js"></script>
+
+<script>
+    $(function () {
+        $('.weui-cell_swiped').swipeout()
+    })
+
+
+</script>

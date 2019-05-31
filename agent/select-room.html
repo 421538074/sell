@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加门店商品</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/select-room.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="stock_nav">
+            <div class="weui-cell weui-cell_swiped" v-for="(item,index) in list" @click="select(index)">
+                <div class="weui-cell__bd">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd nav_mid">
+                            <div class="radio_img">
+                                <span class="img1" :class="{img2:isAdd.indexOf(index) != -1 }"></span>
+                            </div>
+                            <img class="nav_img" src="../img/雷姆.jpg" alt="">
+                            <ul class="nav_uu">
+                                <li>
+                                    <span class="pro_name">门店名称</span>
+
+                                </li>
+                                <li>
+                                    <span class="pro_stuts">门店地址</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="stock_bot">
+            <img src="../img/确认1.png" alt="" style="width: 100%;height:100%;">
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/select-room.js"></script>

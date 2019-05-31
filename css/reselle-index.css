@@ -63,6 +63,7 @@ body {
 
 .weui-grid__icon+.weui-grid__label {
     margin-top: 1.4rem !important;
+    position: relative;
 }
 
 .weui-grids:before {
@@ -83,4 +84,15 @@ body {
 
 .weui-grid:after {
     border: 0 !important;
+}
+
+.box {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    background: rgba(250, 91, 88, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    right: 15%;
 }

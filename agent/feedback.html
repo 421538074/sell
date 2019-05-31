@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>进货反馈</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="feedback_content">
+            <h4>反馈内容</h4>
+            <textarea name="" id="text_one"></textarea>
+
+            <h4 style="margin-bottom: 1.2rem">添加图片</h4>
+            <div class="up_img">
+                <img src="../img/上传.png" @click="uploadEvent" alt="" class="upImg">
+                <input type="file" name="" id="order-img" multiple="multiple" hidden />
+                <p>最多添加5张图片</p>
+            </div>
+
+            <ul class="file-list clearfix">
+            </ul>
+
+
+            <span class="feedback_con">确定</span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/feedback.js"></script>

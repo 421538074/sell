@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下级管理</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/lower-level.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="lower">
+            <div class="lower_wrap">
+                <input type="text" class="search" placeholder="搜索你想找的代理商">
+                <img src="../img/soushuo.png" class="search_img" alt="">
+            </div>
+
+
+            <ul class="lower_uu">
+                <li v-for="(item,index) in arr" @click="lowerDetail()">
+                    <div class="lower_left">
+                        <img src="../img/雷姆.jpg" alt="">
+                        <div class="lower_text">
+                            <p>张三</p>
+                            <p>12345678909</p>
+                        </div>
+                    </div>
+                    <div class="lower_right">
+                        <p>销售额</p>
+                        <p>¥21334.12</p>
+                    </div>
+                </li>
+            </ul>
+
+            <span class="lower_add" @click="addLower"></span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/lower-level.js"></script>
