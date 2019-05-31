@@ -4,8 +4,7 @@ new Vue({
         return {
             currentIndex: 0,
             photoPreview: '',
-            isShowPhotoReview:false,
-            currentPreviewIndex:0
+            isShowPhotoReview:false
         }
     },
     methods: {
@@ -33,7 +32,7 @@ new Vue({
                     vm.isShowPhotoReview =false;
                 },
                 onSlideChange:function(index) {
-                    this.currentPreviewIndex = index;
+                    console.log(index);
                 }
             });
 

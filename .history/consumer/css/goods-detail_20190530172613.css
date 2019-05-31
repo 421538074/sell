@@ -5,7 +5,7 @@ div.content{
 div.content.blur{
     filter: blur(1rem);
 }
-.goods-pictures-wrapper ,.swiper-container-pictures{
+.goods-pictures-wrapper{
     max-height: 30vh;
     overflow: hidden;
 }
@@ -211,24 +211,4 @@ img.comment-img {
 .weui-photo-browser-modal{
     z-index: 3;
     background: transparent;
-}
-.photo-container {
-    padding: 1rem;
-}
-.weui-photo-browser-modal .photo-container img{
-    border-radius: 1rem;
-}
-span.preview-num {
-    position: fixed;
-    display: flex;
-    min-width: 4rem;
-    height: 2rem;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    border-radius: 5rem;
-    background: rgba(89, 109, 145, 0.3);
-    align-items: center;
-    justify-content: center;
-    color: #5A6F93;
 }

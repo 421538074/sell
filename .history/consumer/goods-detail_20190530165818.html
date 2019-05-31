@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div id="app" class="content" :class="{blur:isShowPhotoReview}">
+    <div id="app" class="content" :class="{blur:true}">
         <nav class="nav-bar-wrapper">
             <img src="../img/back.png" class="back-icon">
             <p class="nav-bar-title">商品详情</p>
         </nav>
         <div class="goods-pictures-wrapper">
-            <div class="swiper-container swiper-container-pictures">
+            <div class="swiper-container ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="item in 5">
                         <img @click="openPhotoPreview" src="../img/1.jpg" class="slide-img" alt="">
@@ -97,10 +97,6 @@
             <button class="add-to-cart">加入购物车</button>
             <button @click="openPhotoPreview" class="buy-now">立即购买</button>
         </div>
-        <!-- 图片预览的数字 -->
-        <!-- <span class="preview-num">
-            1 / 5
-        </span> -->
     </div>
     <script src="../js/api.js"></script>
     <script src="../js/jquery.min.js"></script>

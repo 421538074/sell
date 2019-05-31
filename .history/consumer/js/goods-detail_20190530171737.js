@@ -4,8 +4,7 @@ new Vue({
         return {
             currentIndex: 0,
             photoPreview: '',
-            isShowPhotoReview:false,
-            currentPreviewIndex:0
+            isShowPhotoReview:false
         }
     },
     methods: {
@@ -29,18 +28,17 @@ new Vue({
             var vm = this;
             this.photoPreview = $.photoBrowser({
                 items: ["../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg"],
+                onOpen:function() {
+                    vm.isShowPhotoReview = true;
+                },
                 onClose:function() {
                     vm.isShowPhotoReview =false;
-                },
-                onSlideChange:function(index) {
-                    this.currentPreviewIndex = index;
                 }
             });
 
         },
         openPhotoPreview() {
             this.photoPreview.open();
-            this.isShowPhotoReview = true;
         },
         switchTab(index) {
             if (this.currentIndex != index) {
