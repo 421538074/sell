@@ -1,0 +1,18 @@
+div.content{
+    padding-top: 5rem;
+}
+.order-fail-wrapper {
+    height: calc(100% - 5rem);
+}
+img.order-success-icon {
+    width: 30%;
+    height: auto;
+}
+.order-fail-wrapper {
+    height: calc(100% - 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+}

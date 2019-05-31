@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付成功</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pay-success.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav @click="back" class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">支付成功</p>
+        </nav>
+        <div class="order-success-wrapper">
+            <img src="../img/order-success.png" class="order-success-icon">
+            <p class="order-success-title">付款成功</p>
+            <p class="show-actual-money">实付金额：￥124</p>
+        </div>
+        <div class="order-detail-wrapper">
+            <p class="order-detail-title">订单详情</p>
+            <p class="order-address">
+                订单地址：东方今典克劳福德发发
+            </p>
+        </div>
+        <ul class="order-goods-list-wrapper">
+            <li class="order-item">
+                <img src="../img/1.jpg" class="goods-icon">
+                <div class="goods-detail">
+                    <p class="goods-title ellipsis">名称名称名称名称名称名称名称名称名称名称名称名称名称名称名称名称</p>
+                    <p class="goods-category">规格：二级</p>
+                    <p class="goods-price-num">
+                        <span class="price">￥123</span>
+                        <span class="post">包邮</span>
+                        <span class="num">× 1</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+</body>
+
+</html>

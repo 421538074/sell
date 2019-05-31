@@ -1,0 +1,10 @@
+div.content{
+    padding-top: 5rem;
+}
+.order-fail-wrapper {
+    height: calc(100% - 5rem);
+}
+img.order-success-icon {
+    width: 30%;
+    height: auto;
+}

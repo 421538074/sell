@@ -1,0 +1,14 @@
+div.content {
+    padding-top: 5rem;
+}
+.order-success-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+img.order-success-icon {
+    width: 35%;
+    height: auto;
+}

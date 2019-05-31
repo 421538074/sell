@@ -1,0 +1,58 @@
+div.content {
+    padding:5rem 0;
+}
+.pay-way-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #f6f6f6;
+}
+img.pay-way-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.pay-way-wrapper {
+    margin-top: 0.5rem;
+    background: #ffffff;
+}
+p.pay-way-name {
+    color: #3E3E3E;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+img.pay-way-checked {
+    position: absolute;
+    right: 1rem;
+    width: 2rem;
+}
+.go-pay-operation {
+    border-top: 1px solid #D8D8D8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: #ffffff;
+    font-size: 1.6rem;
+}
+p.show-pay-money {
+    color: #F47319;
+}
+p.show-pay-money {
+    color: #F47319;
+    flex: 1;
+    height: 100%;
+    line-height: 5rem;
+}
+a.go-pay-btn {
+    text-decoration: none;
+    height: 100%;
+    line-height: 5rem;
+    width: 20%;
+    text-align: center;
+    background: #0093FF;
+    color: #FFFFFF;
+}

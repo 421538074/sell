@@ -1,0 +1,16 @@
+div.content{
+    padding-top: 5rem;
+}
+img.order-success-icon {
+    width: 30%;
+    height: auto;
+}
+.order-fail-wrapper {
+    height: 100%;
+    border-top: 2px solid #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+}

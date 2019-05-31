@@ -1,0 +1,29 @@
+div.content{
+    padding-top: 5rem;
+}
+img.order-success-icon {
+    width: 30%;
+    height: auto;
+}
+.order-fail-wrapper {
+    height: 100%;
+    border-top: 2px solid #f6f6f6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    background: #FFFFFF;
+}
+p.order-fail-title {
+    color: #00ABFF;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+p.order-fail-info {
+    color: #868686;
+    font-size: 1.2rem;
+    width: 50%;
+    text-align: center;
+    line-height: 2rem;
+    padding: 1rem;
+}

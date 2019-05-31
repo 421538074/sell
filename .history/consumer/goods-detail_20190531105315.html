@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/jquery.weui.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="css/goods-detail.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <div class="blur" :class="{active:isShowPhotoReview}">
+            <nav class="nav-bar-wrapper">
+                <img src="../img/back.png" class="back-icon">
+                <p class="nav-bar-title">商品详情</p>
+            </nav>
+            <div class="goods-pictures-wrapper" @click="openPhotoPreview">
+                <div class="goods-swiper-main swiper-container swiper-container-pictures">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="item in 5">
+                            <img src="../img/1.jpg" class="slide-img" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="goods-detail-wrapper">
+                <p class="main-title-wrapper">
+                    <span class="goods-title">产品名称</span>
+                    <img src="../img/share-icon.png" class="share-action-icon">
+                </p>
+                <p class="goods-title-desc">产品名称</p>
+                <div class="goods-price-delivery">
+                    <p class="goods-price">￥123.00</p>
+                    <p class="delivery-fee">快递：免邮</p>
+                    <p class="sell-counts-month">月销量：124件</p>
+                </div>
+            </div>
+            <div class="tab-bar-wrapper">
+                <div @click="switchTab(0)" :class="{active:currentIndex == 0}" class="tab-bar-item">商品详情</div>
+                <div @click="switchTab(1)" :class="{active:currentIndex == 1}" class="tab-bar-item">基本信息</div>
+                <div @click="switchTab(2)" :class="{active:currentIndex == 2}" class="tab-bar-item">买家评论</div>
+            </div>
+            <div class="tab-content-wrapper">
+                <div v-show="currentIndex == 0" class="content-detail">
+                    <img v-for="n in 10" src="../img/雷姆.jpg">
+                </div>
+                <div v-show="currentIndex == 1" class="content-detail">
+                    <p v-for="n in 10">看来地方静安寺发的水立方空间</p>
+                </div>
+                <div v-show="currentIndex == 2" class="content-detail">
+                    <p class="show-all-comments-count">
+                        <span class="all-comments-title">全部评论（12）</span>
+                        <img src="../img/arrow-right.png" class="review-all-icon">
+                    </p>
+                    <ul class="comments-list-wrapper">
+                        <li v-for="n in 12" class="comment-item">
+                            <img src="../img/1.jpg" class="user-logo">
+                            <div class="username-socre">
+                                <p class="username-date">
+                                    <span class="nickname">
+                                        用户名称
+                                    </span>
+                                    <span class="comment-date">
+                                        03月23日
+                                    </span>
+                                </p>
+                                <p class="score">
+                                    <img v-for="n in 4" src="../img/Star1.png" class="score-icon">
+                                    <img v-for="n in 1" src="../img/Star.png" class="score-icon">
+                                </p>
+                                <p class="comment-content">
+                                    评论内容发打开了房间打开了房间的发的拉粉丝空间的范德萨拉风科技的副科级偶给国家疯狂进攻该放垃圾而欧冠对方拉结公安
+                                </p>
+                                <p class="comment-img-wrapper">
+                                    <img v-for="n in 4" src="../img/1.jpg" class="comment-img">
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="operation-bar">
+                <span class="shop-cart">
+                    <img src="../img/shop-cart.png" class="shop-cart-icon">
+                    <i class="num-icon"></i>
+                </span>
+                <span class="address">
+                    <img src="../img/positon.png" class="position-icon">
+                </span>
+                <a href="javascript:;" @click="addToCart" class="add-to-cart">加入购物车</a>
+                <a href="javascript:;" @click="buyNow" class="buy-now">立即购买</a>
+            </div>
+        </div>
+        <!-- 图片预览的数字 -->
+        <span v-show="isShowPhotoReview" class="preview-num">
+            {{currentPreviewIndex+1}} / 5
+        </span>
+        <!-- 购买/加入购物车弹窗 -->
+        <div id="goods-choice" class="weui-popup__container">
+            <div class="weui-popup__overlay"></div>
+            <div class="weui-popup__modal">
+                <div class="goods-swiper-sub swiper-container swiper-container-pictures">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="item in 5">
+                            <img src="../img/1.jpg" class="slide-img" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next-2"></div>
+                    <div class="swiper-button-prev swiper-button-prev-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swipe.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/goods-detail.js"></script>
+</body>
+
+</html>
