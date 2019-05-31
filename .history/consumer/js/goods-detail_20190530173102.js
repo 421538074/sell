@@ -4,8 +4,7 @@ new Vue({
         return {
             currentIndex: 0,
             photoPreview: '',
-            isShowPhotoReview:false,
-            currentPreviewIndex:0
+            isShowPhotoReview:false
         }
     },
     methods: {

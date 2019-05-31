@@ -4,8 +4,7 @@ new Vue({
         return {
             currentIndex: 0,
             photoPreview: '',
-            isShowPhotoReview:false,
-            currentPreviewIndex:0
+            isShowPhotoReview:false
         }
     },
     methods: {
@@ -26,21 +25,20 @@ new Vue({
             });
         },
         initPhotoPreview() {
-            var vm = this;
             this.photoPreview = $.photoBrowser({
                 items: ["../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg", "../../img/1.jpg"],
-                onClose:function() {
-                    vm.isShowPhotoReview =false;
+                onOpen:function() {
+                    this.isShowPhotoReview = true;
                 },
-                onSlideChange:function(index) {
-                    this.currentPreviewIndex = index;
+                onClose:function() {
+                    console.log('关闭')
+                    this.isShowPhotoReview =false;
                 }
             });
 
         },
         openPhotoPreview() {
             this.photoPreview.open();
-            this.isShowPhotoReview = true;
         },
         switchTab(index) {
             if (this.currentIndex != index) {
