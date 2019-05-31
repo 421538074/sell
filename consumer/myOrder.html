@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/myOrder.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">商品订单</p>
+            <p class="nav-text">售后/退款</p>
+        </nav>
+
+        <div class="order_top">
+            <ul class="order_uu">
+                <li class="active" @click="tag(0)">
+                    全部
+                </li>
+                <li @click="tag(1)">
+                    待付款
+                </li>
+                <li @click="tag(2)">
+                    待收货
+                </li>
+                <li @click="tag(3)">
+                    待评价
+                </li>
+                <li @click="tag(4)">
+                    已完成
+                </li>
+            </ul>
+        </div>
+
+        <div class="order_bot">
+            <ul class="nav_uu" v-for="item in list">
+                <li class="lis_one">
+                    <span>某某某代理商</span>
+                    <span style="color: #F47319;">待收货</span>
+                </li>
+                <li class="lis_two">
+                    <img src="../img/1.jpg" alt="" class="two-img">
+                    <div class="two_right">
+                        <div class="two_right_top">
+                            <p>商品的商品名泰国 i 经费管理法规</p>
+                            <span>x 1</span>
+                        </div>
+                        <p class="two_text">规格：二级</p>
+                        <p class="two_num">¥ 123.00</p>
+                    </div>
+                </li>
+                <li class="lis_three">
+                    <span class="three-one">查看物流</span>
+                    <span class="three-two" @click="goProblem">确认收货</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/myOrder.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<style>
+    .content {
+        padding-top: 5rem;
+    }
+
+    .nav_mian {
+        background: white;
+        padding: 0.85rem 1rem;
+    }
+
+    textarea {
+        outline: none;
+        resize: none;
+        width: 100%;
+        height: 7rem;
+        border: 0;
+    }
+
+    #upload {
+        width: 17%;
+        margin-top: 0.5rem
+    }
+
+    .refer {
+        display: block;
+        width: 90%;
+        height: 3.4rem;
+        background: #0093ff;
+        border-radius: 1.7rem;
+        text-align: center;
+        line-height: 3.2rem;
+        color: white;
+        font-size: 1.6rem;
+        margin: 1rem auto 0;
+    }
+</style>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">问题反馈</p>
+        </nav>
+
+
+        <div class="nav_mian">
+            <textarea name="" id="" placeholder="商品遇到问题了吗，马上反馈给商家吧！"></textarea>
+            <img src="../img/上传2.png" alt="" id="upload">
+            <ul></ul>
+        </div>
+
+        <span class="refer">提交</span>
+
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/myOrder.js"></script>
+</body>
+
+</html>

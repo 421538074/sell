@@ -1,0 +1,127 @@
+.nav-text {
+    position: absolute;
+    right: 1rem;
+    font-size: .4rem;
+    color: rgba(166, 166, 166, 1);
+}
+
+.content {
+    padding: 5rem 0 0 0;
+}
+
+.order_top {
+    position: fixed;
+    width: 100%;
+
+}
+
+.order_uu {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_uu li {
+    background: white;
+    width: 17vw;
+    height: 17vw;
+    text-align: center;
+    line-height: 17vw;
+    font-size: 1.4rem;
+    color: #A6A6A6;
+}
+
+.active {
+    color: #0093FF !important;
+}
+
+.order_bot {
+    margin-top: 23vw;
+}
+
+.nav_uu  {
+    margin-bottom: 0.5rem;
+}
+
+.lis_one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    line-height: 1.5rem;
+}
+
+.lis_two {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    line-height: 1.5rem;
+}
+
+.two-img {
+    width: 23%;
+    height: auto;
+    margin-right: 0.85rem;
+}
+
+.two_right {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 1);
+}
+
+.two_right_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.7rem;
+}
+
+.two_text {
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.two_num {
+    font-size: 1.6rem;
+    color: #5a6f93;
+}
+
+.lis_three {
+    padding: 0.5rem 1rem;
+    background: white;
+    text-align: right;
+}
+
+.three-one {
+    display: inline-block;
+    width: 21.5%;
+    height: 2.4rem;
+    border-radius: 1.4rem;
+    text-align: center;
+    line-height: 2.4rem;
+    border: 1px solid #0093ff;
+    color: #0093FF;
+    font-size: 1.4rem;
+}
+
+.three-two {
+    display: inline-block;
+    width: 21.5%;
+    height: 2.4rem;
+    border-radius: 1.4rem;
+    text-align: center;
+    line-height: 2.4rem;
+    background: #0093FF;
+    color: white;
+    font-size: 1.4rem;
+    margin-left: 0.85rem;
+}
