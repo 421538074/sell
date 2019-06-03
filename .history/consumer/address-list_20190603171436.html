@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收货地址</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/address-list.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img @click="back" src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">收货地址</p>
+            <p @click="linkTo('manage-address.html?type=add')" class="management">添加</p>
+        </nav>
+        <ul class="address-wrapper">
+            <li v-for="n in 7" class="address-item">
+                <p class="user-info-wrapper">
+                    <span class="username">周某人</span>
+                    <span class="phone">13987838902</span>
+                </p>
+                <p class="detail-address">
+                    详细的地址
+                </p>
+                <p class="set-default-wrapper" :class="{activev:currendDefault == n}">
+                    <span class="set-operation">
+                        <img v-if="currendDefault == n" src="../img/按钮1.png" class="set-default-icon">
+                        <img v-else src="../img/checked.png" class="set-default-icon">
+                        <i class="set-default-title">设为默认</i>
+                    </span>
+                    <span class="operation-group">
+                        <img src="../img/edit.png" class="edit-delete-icon">
+                        <img src="../img/delete.png" class="edit-delete-icon">
+                    </span>
+                </p>
+            </li>
+        </ul>
+        <div class="confirm-wrapper">
+            <button class="confirm-add">
+                确定
+            </button>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/address-list.js"></script>
+</body>
+
+</html>

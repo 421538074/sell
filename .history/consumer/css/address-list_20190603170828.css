@@ -1,0 +1,47 @@
+div.content{
+    padding-top: 5rem;
+}
+.confirm-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #f6f6f6;
+}
+button.confirm-add {
+    background: #0093FF;
+    border: none;
+    outline: 0;
+    color: #FFFFFF;
+    width: 90%;
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+}
+p.management {
+    position: absolute;
+    right: 1rem;
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+ul.address-wrapper {
+    background: #f6f6f6;
+    border-top: 2px solid #f6f6f6;
+    height: calc(100vh - 10rem);
+    overflow: scroll;
+}
+li.address-item {
+    background: #FFFFFF;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+span.username,span.phone {
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+p.user-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/jquery.weui.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop-cart.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <p class="nav-bar-title">购物车</p>
+            <p @click="managerCart" v-if="!isManaging" class="management">管理</p>
+            <p @click="finishManCart" v-else class="management">完成</p>
+        </nav>
+        <!-- 购物车列表 -->
+        <ul class="shop-cart-goods-list">
+            <li v-for="(item,index) in selectList" class="shop-cart-item" :class="{active:isInList(item)}">
+                <span @click="triggerItem(item)" class="checkbox">
+                    <img src="../img/select.png" class="select-icon">
+                    <img src="../img/selected.png" class="select-icon active">
+                </span>
+                <img src="../img/1.jpg" class="goods-icon">
+                <!-- 
+                    详情 
+                -->
+                <div v-if="editGoodsId != item" class="goods-detail">
+                    <p class="goods-title-edit">
+                        <span class="goods-title">商品名称</span>
+                        <img @click="editGoods(item)" src="../img/edit.png" class="edit-icon">
+                    </p>
+                    <p class="goods-category">
+                        规格：二级
+                    </p>
+                    <p class="goods-price-num">
+                        <span class="goods-price">￥120</span>
+                        <span class="num">× 1</span>
+                    </p>
+                </div>
+                <!-- 
+                    编辑
+                 -->
+                <div v-else class="goods-detail">
+                    <div class="add-or-reduce">
+                        <img src="../img/reduce.png" class="add-reduce-icon">
+                        <span class="show-num">1</span>
+                        <img src="../img/add.png" class="add-reduce-icon">
+                        <button @click="finishEdit" class="finish-edit">完成</button>
+                    </div>
+                    <p @click="selectGoodsSpecs(item)" class="show-specs">
+                        <span class="show-desc">
+                            规格：礼盒 100g
+                        </span>
+                        <img src="../img/arrow-down.png" class="arrow-down">
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <!-- 显示金额，结算 -->
+        <div class="shop-cart-operation">
+            <p @click="selectAll" class="select-all">
+                <span class="checkbox">
+                    <img v-show="!isSelectAll" src="../img/select.png" class="select-icon">
+                    <img v-show="isSelectAll" src="../img/selected.png" class="select-icon">
+                </span>
+                <span class="title">全选</span>
+            </p>
+            <div class="total-money-settle">
+                <p class="total-money">
+                    合计：123.00
+                </p>
+                <button class="go-settle">
+                    去结算
+                </button>
+            </div>
+        </div>
+        <nav class="tool-bar-wrapper">
+            <a href="javascript:;" class="nav-item">
+                <img src="../img/home.png" class="nav-item-icon">
+                <span class="tilte">首页</span>
+            </a>
+            <a href="goods-classify.html" class="nav-item">
+                <img src="../img/classify.png" class="nav-item-icon">
+                <span class="tilte">分类</span>
+            </a>
+            <a href="shop-cart.html" class="nav-item active">
+                <img src="../img/shop-active.png" class="nav-item-icon">
+                <span class="tilte">购物车</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <img src="../img/user.png" class="nav-item-icon">
+                <span class="tilte">我的</span>
+            </a>
+        </nav>
+        <!-- 购买/加入购物车弹窗 -->
+        <div id="goods-choice" class="weui-popup__container">
+            <div class="weui-popup__overlay"></div>
+            <div class="weui-popup__modal">
+                <img @click="closePopup" src="../img/close-popup.png" class="close-popup">
+                <div class="goods-swiper-sub swiper-container swiper-container-pictures">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="item in 5">
+                            <img src="../img/1.jpg" class="slide-img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="prce-show">
+                    <p class="price">￥100</p>
+                    <p class="tips">请选择商品规格</p>
+                </div>
+                <p class="classify-title">规格</p>
+                <div class="goods-mian-classify">
+                    <p @click="choseMain(n)" v-for="n in 5" class="main-classify-item" :class="{active:n == mainType}">
+                        100g</p>
+                </div>
+                <p class="classify-title">规格</p>
+                <div class="goods-sub-classify">
+                    <p @click="choseSub(n)" v-for="n in 6" class="sub-classify-item" :class="{active:n == subType}">红色
+                    </p>
+                </div>
+                <button class="add-or-buy">确定</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swipe.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/shop-cart.js"></script>
+</body>
+
+</html>

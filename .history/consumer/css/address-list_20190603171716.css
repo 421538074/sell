@@ -1,0 +1,92 @@
+div.content{
+    padding-top: 5rem;
+}
+.confirm-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #f6f6f6;
+}
+button.confirm-add {
+    background: #0093FF;
+    border: none;
+    outline: 0;
+    color: #FFFFFF;
+    width: 90%;
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+}
+p.management {
+    position: absolute;
+    right: 1rem;
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+ul.address-wrapper {
+    background: #f6f6f6;
+    border-top: 2px solid #f6f6f6;
+    height: calc(100vh - 10rem);
+    overflow: scroll;
+}
+li.address-item {
+    background: #FFFFFF;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+span.username,span.phone {
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+p.user-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+p.detail-address {
+    color: #A6A6A6;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    position: relative;
+}
+p.detail-address::after{
+    content: '';
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: -1rem;
+    height: 1px;
+    background: #f6f6f6;
+}
+p.set-default-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+img.set-default-icon {
+    width: 1.5rem;
+    height: auto;
+}
+img.edit-delete-icon {
+    width: 1.6rem;
+    height: auto;
+    margin-left: 1rem;
+}
+span.set-operation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.set-default-wrapper i.set-default-title {
+    color: #9097A3;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+}
+.set-default-wrapper.active i.set-default-title {
+    color: #0093FF;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+}

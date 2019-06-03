@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop-cart.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <p class="nav-bar-title">购物车</p>
+            <p class="management">管理</p>
+        </nav>
+        <!-- 购物车列表 -->
+        <ul class="shop-cart-goods-list">
+            <li v-for="n in 10" class="shop-cart-item" :class="{active:isInList(n)}">
+                <span @click="triggerItem(n)" class="checkbox">
+                    <img src="../img/select.png" class="select-icon">
+                    <img src="../img/selected.png" class="select-icon active">
+                </span>
+                <img src="../img/1.jpg" class="goods-icon">
+                <div class="goods-detail">
+                    <p class="goods-title-edit">
+                        <span class="goods-title">商品名称</span>
+                        <img src="../img/edit.png" class="edit-icon">
+                    </p>
+                    <p class="goods-category">
+                        规格：二级
+                    </p>
+                    <p class="goods-price-num">
+                        <span class="goods-price">￥120</span>
+                        <span class="num">× 1</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <!-- 显示金额，结算 -->
+        <div class="shop-cart-operation">
+            <p class="select-all">
+                <span class="checkbox">
+                    <img src="../img/select.png" class="select-icon">
+                    <img src="../img/selected.png" class="select-icon">
+                </span>
+                <span class="title">全选</span>
+            </p>
+            <div class="total-money-settle">
+                <p class="total-money">
+                    合计：123.00
+                </p>
+                <button class="go-settle">
+                    去结算
+                </button>
+            </div>
+        </div>
+        <nav class="tool-bar-wrapper">
+            <a href="javascript:;" class="nav-item">
+                <img src="../img/home.png" class="nav-item-icon">
+                <span class="tilte">首页</span>
+            </a>
+            <a href="goods-classify.html" class="nav-item">
+                <img src="../img/classify.png" class="nav-item-icon">
+                <span class="tilte">分类</span>
+            </a>
+            <a href="shop-cart.html" class="nav-item active">
+                <img src="../img/shop-active.png" class="nav-item-icon">
+                <span class="tilte">购物车</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <img src="../img/user.png" class="nav-item-icon">
+                <span class="tilte">我的</span>
+            </a>
+        </nav>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/shop-cart.js"></script>
+</body>
+
+</html>
