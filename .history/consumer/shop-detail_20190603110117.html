@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>门店详情</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop-detail.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img @click="back" src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">门店详情</p>
+        </nav>
+        <!-- swiper轮播图 -->
+        <div class="swiper-container show-img-wrapper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="item in 5">
+                    <img src="../img/1.jpg" class="slide-img" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 详细信息 -->
+        <div class="shop-detail-info">
+            <p class="shop-name-time">
+                <span class="shop-title">店铺名称</span>
+                <span class="time">8:00~23:00</span>
+            </p>
+            <p class="shop-score">
+                <img v-for="n in 4" src="../img/Star1.png" class="score-icon">
+                <img src="../img/Star.png" class="score-icon">
+            </p>
+            <p class="shop-address">
+                <span class="address ellipsis">地址信息</span>
+                <img src="../img/navigation.png" class="navigation-icon">
+            </p>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/shop-detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+div.content{
+    padding-top: 5rem;
+}
+li.nearby-shops-item {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+}
+img.shop-icon {
+    width: 8rem;
+    height: auto;
+}

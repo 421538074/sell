@@ -17,7 +17,7 @@
     <div id="app" class="content">
         <div class="blur" :class="{active:isShowPhotoReview}">
             <nav class="nav-bar-wrapper">
-                <img @click="back" src="../img/back.png" class="back-icon">
+                <img  @click="back" src="../img/back.png" class="back-icon">
                 <p class="nav-bar-title">商品详情</p>
             </nav>
             <div class="goods-pictures-wrapper">
@@ -34,10 +34,7 @@
             <div class="goods-detail-wrapper">
                 <p class="main-title-wrapper">
                     <span class="goods-title">产品名称</span>
-                    <span @click="linkTo('nearby-shops.html')" class="nearby-shops">
-                        <img src="../img/positon.png" class="share-action-icon">
-                        <i class="nearby-title">附近门店</i>
-                    </span>
+                    <img @click="shareGoods" src="../img/share-icon.png" class="share-action-icon">
                 </p>
                 <p class="goods-title-desc">产品名称</p>
                 <div class="goods-price-delivery">
@@ -95,7 +92,7 @@
                     <img src="../img/shop-cart.png" class="shop-cart-icon">
                     <i class="num-icon"></i>
                 </span>
-                <span @click="shareGoods" class="address">
+                <span class="address">
                     <img src="../img/share-icon.png" class="position-icon">
                 </span>
                 <a href="javascript:;" @click="addToCart" class="add-to-cart">加入购物车</a>

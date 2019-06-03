@@ -1,0 +1,52 @@
+div.content{
+    padding-top: 5rem;
+}
+li.nearby-shops-item {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-top: 0.5rem solid #f6f6f6;
+    padding: 1rem;
+}
+img.shop-icon {
+    width: 8rem;
+    height: 8rem;
+}
+.shop-detial {
+    flex: 1;
+    height: 8rem;
+}
+p.shop-title-distance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span.shop-title {
+    color: #000000;
+    font-size: 1.6rem;
+}
+span.distance {
+    color: #A6A6A6;
+    font-size: 1.2rem;
+}
+img.score-icon {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+p.sell-monthly {
+    color: #A6A6A6;
+    font-size: 1.2rem;
+}
+span.address {
+    color: #A6A6A6;
+    font-size: 1.2rem;
+}
+button.enter-shop {
+    background: #0093FF;
+    border: none;
+    outline: 0;
+    color: #FFFFFF;
+    border-radius: 10rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}

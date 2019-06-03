@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>附近门店</title>
+    <link rel="stylesheet" href="../css/jquery.weui.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nearby-shops.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+            <nav class="nav-bar-wrapper">
+                <img @click="back" src="../img/back.png" class="back-icon">
+                <p class="nav-bar-title">附近门店</p>
+            </nav>
+            <ul class="nearby-shops-list-wrapper">
+                <li v-for="n in 10" class="nearby-shops-item">
+                    <img src="../img/1.jpg" class="shop-icon">
+                    <div class="shop-detial">
+                        <p class="shop-title-distance">
+                            <span class="shop-title ellipsis">店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称</span>
+                            <span class="distance">1000米</span>
+                        </p>
+                        <p class="shop-score">
+                            <img v-for="n in 4" src="../img/Star1.png" class="score-icon">
+                            <img src="../img/Star.png" class="score-icon">
+                        </p>
+                        <p class="sell-monthly">
+                            月售：1111
+                        </p>
+                        <p class="shop-address">
+                            <span class="address">地址信息</span>
+                            <button class="enter-shop">进店</button>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/nearby-shops.js"></script>
+</body>
+
+</html>

@@ -24,6 +24,11 @@ header.title {
     max-height: 30vh;
 }
 
+.show-img-wrapper {
+    height: 30vh;
+    max-height: 30vh;
+}
+
 .swiper-pagination-bullet {
     width: 0.6rem;
     height: 0.6rem;
