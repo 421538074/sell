@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付失败</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pay-fail.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav @click="back" class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">支付失败</p>
+        </nav>
+        <div class="order-fail-wrapper">
+            <img src="../img/order-fail.png" class="order-success-icon">
+            <p class="order-fail-title">支付失败</p>
+            <p class="order-fail-info">订单支付失败，可能是您的余额不足
+                    或是其他原因。</p>
+        </div>
+        <div class="operation-group">
+            <button class="go-back">返回上级</button>
+            <button class="re-pay">重新支付</button>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/pay-fail.js"></script>
+</body>
+
+</html>

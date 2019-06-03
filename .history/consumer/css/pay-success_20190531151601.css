@@ -1,0 +1,41 @@
+div.content {
+    padding-top: 5rem;
+}
+.order-success-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    background: #FFFFFF;
+    margin-top: 0.1rem;
+}
+img.order-success-icon {
+    width: 35%;
+    height: auto;
+}
+p.order-success-title {
+    color: #00ABFF;
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+p.show-actual-money {
+    color: #3E3E3E;
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+.order-detail-wrapper {
+    margin-top: 0.1rem;
+    background: #FFFFFF;
+    padding: 1rem;
+    border-bottom: 1px solid #f6f6f6;
+}
+p.order-detail-title {
+    color: #3E3E3E;
+    font-size: 1.6rem;
+}
+p.order-address {
+    color: #A6A6A6;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}

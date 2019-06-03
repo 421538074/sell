@@ -1,0 +1,17 @@
+div.content {
+    padding-top: 5rem;
+}
+.pay-way-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #f6f6f6;
+}
+img.pay-way-icon {
+    width: 4rem;
+    height: 4rem;
+}
+.pay-way-wrapper {
+    margin-top: 0.5rem;
+    background: #ffffff;
+}

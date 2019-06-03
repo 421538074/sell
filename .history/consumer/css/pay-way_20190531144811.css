@@ -1,0 +1,10 @@
+.pay-way-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+img.pay-way-icon {
+    width: 4rem;
+    height: 4rem;
+}

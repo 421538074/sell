@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <!-- 主内容 -->
+        <div class="main-content-wrapper">
+            <!-- swiper轮播图 -->
+            <div class="swiper-container show-img-wrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="item in 5">
+                        <img src="../img/1.jpg" class="slide-img" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- 定位、搜索 -->
+            <div class="position-search">
+                <div class="position">
+                    <img src="../img/location.png" class="location-icon">
+                    <span class="location-name">南京</span>
+                </div>
+                <div class="search-wrapper">
+                    <input class="search-input" type="text" placeholder="搜索关键词">
+                </div>
+            </div>
+            <!-- 百货分类 -->
+            <ul class="department-classify">
+                <li v-for="n in 3" class="department-iem">
+                    <img src="../img/1.jpg" class="department-icon">
+                    <p class="department-title ellipsis">百货1</p>
+                </li>
+                <li class="department-iem">
+                    <img src="../img/more.png" class="department-icon">
+                    <p class="department-title ellipsis">更多</p>
+                </li>
+            </ul>
+            <!-- 热门商品 -->
+            <div class="hot-goods-wrapper">
+                <p class="title">
+                    热门商品
+                </p>
+                <ul class="goods-list-wrapper">
+                    <li v-for="n in 3" class="goods-item">
+                        <img src="../img/1.jpg" class="goods-icon">
+                        <p class="goods-title">商品名称</p>
+                        <p class="goods-price">￥111</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="tool-bar-wrapper">
+            <a href="javascript:;" class="nav-item active">
+                <img src="../img/home-active.png" class="nav-item-icon">
+                <span class="tilte">首页</span>
+            </a>
+            <a href="goods-classify.html" class="nav-item">
+                <img src="../img/classify.png" class="nav-item-icon">
+                <span class="tilte">分类</span>
+            </a>
+            <a href="shop-cart.html" class="nav-item">
+                <img src="../img/shop.png" class="nav-item-icon">
+                <span class="tilte">购物车</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <img src="../img/user.png" class="nav-item-icon">
+                <span class="tilte">我的</span>
+            </a>
+        </nav>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

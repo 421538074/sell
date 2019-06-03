@@ -1,0 +1,14 @@
+div.content{
+    display: flex;
+    flex-direction: column;
+}
+header.title {
+    height: 5rem;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #426196;
+}
