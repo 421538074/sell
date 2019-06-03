@@ -57,8 +57,8 @@
                     </div>
                 </li>
                 <li class="lis_three">
-                    <span class="three-one">查看物流</span>
-                    <span class="three-two" @click="goProblem">确认收货</span>
+                    <span class="three-one" @click="lookInfo">查看物流</span>
+                    <span class="three-two" @click="goProblem(item.task)">{{item.task}}</span>
                 </li>
             </ul>
         </div>

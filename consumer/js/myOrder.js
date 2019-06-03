@@ -3,8 +3,10 @@ new Vue({
     data() {
         return {
             list: [
-                {},
-                {},
+                { task: '确认收货' },
+                { task: '反馈问题' },
+                { task: '评价' },
+                { task: '评价' },
             ],
 
         }
@@ -15,13 +17,20 @@ new Vue({
 
             }
         },
-        goProblem() {
-            if (a == 1) {
-                window.location.href = "feedback.html"
-            } else {
-                window.location.href = "feedback-once.html"
+        goProblem(name) {
+            if (name == "反馈问题") {
+                a = 1
+                if (a == 1) {
+                    window.location.href = "feedback.html"
+                } else {
+                    window.location.href = "feedback-once.html"
+                }
+            } else if (name == "评价") {
+                window.location.href = "evaluate.html"
             }
-
+        },
+        lookInfo() {
+            window.location.href = "logistics.html"
         }
     }
 })
