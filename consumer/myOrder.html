@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品分类</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/weui.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/myOrder.css">
+
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         <nav class="nav-bar-wrapper">
             <img src="../img/back.png" class="back-icon">
             <p class="nav-bar-title">商品订单</p>
-            <p class="nav-text">售后/退款</p>
+            <p class="nav-text" @click="goService">售后/退款</p>
         </nav>
 
         <div class="order_top">
@@ -40,12 +42,12 @@
         </div>
 
         <div class="order_bot">
-            <ul class="nav_uu" v-for="item in list">
+            <ul class="nav_uu" v-for="item in list" >
                 <li class="lis_one">
                     <span>某某某代理商</span>
                     <span style="color: #F47319;">待收货</span>
                 </li>
-                <li class="lis_two">
+                <li class="lis_two" @click="productDeatil">
                     <img src="../img/1.jpg" alt="" class="two-img">
                     <div class="two_right">
                         <div class="two_right_top">
@@ -58,13 +60,14 @@
                 </li>
                 <li class="lis_three">
                     <span class="three-one" @click="lookInfo">查看物流</span>
-                    <span class="three-two" @click="goProblem(item.task)">{{item.task}}</span>
+                    <span class="three-two weui-btn_primary" @click="goProblem(item.task)">{{item.task}}</span>
                 </li>
             </ul>
         </div>
 
     </div>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/weui.min.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/vue.js"></script>
     <script src="js/vue-mixin.js"></script>

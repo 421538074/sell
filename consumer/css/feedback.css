@@ -2,6 +2,13 @@
     padding-top: 5rem;
 }
 
+.nav-text {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.4rem;
+    color: rgba(166, 166, 166, 1);
+}
+
 /* 回复 */
 .reply {
     width: 100%;

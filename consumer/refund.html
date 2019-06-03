@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/refund.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">退款详情</p>
+        </nav>
+
+        <div class="sale_bar">
+            <span class="bar_text">退款处理中</span>
+            <!-- <div class="bar_wrap">
+                <div class="sale_wrap">
+                    <img src="../img/sale-detail-1.png" alt="">
+                    <div class="sale_right">
+                        <p>某某人 12345678908</p>
+                        <p>某某人的详细地址</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="sale_info">
+            <img src="../img/1.jpg" alt="">
+            <div class="sale_info_wrap">
+                <p class="info_specs">退款金额：¥123.00</p>
+                <p class="info_num">退款处理中，请稍等</p>
+            </div>
+        </div>
+        <div class="sale_btn">
+            <span class="weui-btn_primary" @click="refundChange">取消退款</span>
+        </div>
+
+        <div class="sale_bot">
+            <ul class="bot_uu">
+                <li>
+                    <span>退款信息</span>
+                </li>
+                <li>
+                    <p>退款原因：不想要/拍错</p>
+                    <p>退款金额：¥123.00</p>
+                    <p>申请时间：2018-03-02 11:23</p>
+                    <p>退款说明：如果让发动机日方</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sale_phone">
+            <img src="../img/balance-1.png" alt="">
+            <p>联系商家</p>
+        </div>
+
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/refund.js"></script>
+</body>
+
+</html>

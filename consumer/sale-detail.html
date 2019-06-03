@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sale-detail.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">订单详情</p>
+        </nav>
+
+        <div class="sale_bar">
+            <span class="bar_text">待付款</span>
+            <div class="bar_wrap">
+                <div class="sale_wrap">
+                    <img src="../img/sale-detail-1.png" alt="">
+                    <div class="sale_right">
+                        <p>某某人 12345678908</p>
+                        <p>某某人的详细地址</p>
+                    </div>
+                </div>
+                <!-- <span class="bar_btn" @click="askFor">申请退款</span> -->
+            </div>
+
+        </div>
+
+        <div class="sale_info">
+            <img src="../img/1.jpg" alt="">
+            <div class="sale_info_wrap">
+                <div class="sale_info_box">
+                    <p>商品的商品名泰国 i 经费管理法规</p>
+                    <span style="color: #A6A6A6;font-size:1.2rem;">x 1</span>
+                </div>
+                <p class="info_specs">规格：散装；100g</p>
+                <p class="info_num">¥ 123.00</p>
+            </div>
+        </div>
+
+        <div class="sale_bot">
+            <ul class="bot_uu">
+                <li>
+                    <span>快递费：免邮</span>
+                </li>
+                <li>
+                    <span>实付金额（含运费）</span>
+                    <span style="color: #5A6F93;">¥ 123.00</span>
+                </li>
+                <li>
+                    <div>
+                        <p>买家留言</p>
+                        <p style="color: #A6A6A6;margin-top:0.35rem;">尽快发货，要求包装好。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/sale-detail.js"></script>
+</body>
+
+</html>

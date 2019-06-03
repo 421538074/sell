@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>售后反馈</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/godaddy.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">申请退款</p>
+        </nav>
+
+        <div class="nav">
+            <ul class="nav_uu">
+                <li>
+                    <p>退款原因</p>
+                    <select name="" id="">
+                        <option class="opt" value="" selected>请选择原因</option>
+                        <option class="opt" value="">没有原因</option>
+                        <option class="opt" value="">排错了</option>
+                        <option class="opt" value="">不想要了</option>
+                    </select>
+                </li>
+                <li>
+                    <p>联系电话</p>
+                    <input type="text">
+                </li>
+                <li>
+                    <p>退款金额</p>
+                    <input type="text">
+                    <p class="nav_one">现金 ¥123.00；邮费 ¥00.00</p>
+                </li>
+                <li>
+                    <p class=>退款金额<i style="color: #A6A6A6;">（15天内可退货退款）</i></p>
+                    <p class="nav_one">原路退还（2-10个工作日退至原支付方）</p>
+                </li>
+                <li>
+                    <p>退款说明</p>
+                    <textarea name="" id="" placeholder="请填写退款说明，退款处理更便捷"></textarea>
+                </li>
+                <li>
+                    <div class="nav_lis">
+                        <p>商品图片</p>
+                        <p>图片限制5张</p>
+                    </div>
+                    <ul class="lis_uu">
+                        <div>
+                            <img src="../img/上传.png" @click="uploadEvent" alt="" class="upImg">
+                            <input type="file" name="" id="order-img" multiple="multiple" hidden />
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/vue.js"></script>
+<script src="js/godaddy.js"></script>

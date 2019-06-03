@@ -4,7 +4,9 @@ var xm = new Vue({
         int: [{}, {}, {},]
     },
     methods: {
-
+        gorefund(){
+            window.location.href="godaddy.html"
+        }
 
     },
 

@@ -1,7 +1,7 @@
 .nav-text {
     position: absolute;
     right: 1rem;
-    font-size: .4rem;
+    font-size: 1.4rem;
     color: rgba(166, 166, 166, 1);
 }
 
@@ -42,7 +42,7 @@
     margin-top: 23vw;
 }
 
-.nav_uu  {
+.nav_uu {
     margin-bottom: 0.5rem;
 }
 
@@ -73,11 +73,13 @@
 }
 
 .two_right {
+    width: 70%;
     font-size: 1.4rem;
     color: rgba(0, 0, 0, 1);
 }
 
 .two_right_top {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,4 +127,16 @@
     color: white;
     font-size: 1.4rem;
     margin-left: 0.85rem;
+}
+
+.weui-mask {
+    background: rgba(0, 0, 0, .3) !important;
+}
+
+.weui-dialog__title {
+    font-size: 1.6rem;
+}
+
+.weui-dialog__bd {
+    font-size: 1.2rem;
 }

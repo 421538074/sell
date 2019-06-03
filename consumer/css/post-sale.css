@@ -1,0 +1,118 @@
+.nav-text {
+    position: absolute;
+    right: 1rem;
+    font-size: .4rem;
+    color: rgba(166, 166, 166, 1);
+}
+
+.content {
+    padding: 5rem 0 0 0;
+}
+
+/*  */
+.order_bot {
+    margin-top: 1px;
+}
+
+.nav_uu {
+    margin-bottom: 0.5rem;
+}
+
+.lis_two {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    font-size: 1.2rem;
+    color: #a6a6a6;
+    line-height: 1.5rem;
+    background: white;
+}
+
+.two-img {
+    width: 23%;
+    height: auto;
+    margin-right: 0.85rem;
+}
+
+.two_right {
+    width: 70%;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 1);
+}
+
+.two_right_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+}
+
+.two_right_top p {
+    width: 86%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.two_right_mid {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+.two_right_mid img {
+    width: 5%;
+    margin-right: 0.6rem;
+}
+
+.two_text {
+    color: #a6a6a6;
+    margin: 0 0 1.5rem 0;
+}
+
+.two_num {
+    font-size: 1.6rem;
+    color: #5a6f93;
+}
+
+.lis_three {
+    padding: 0.5rem 1rem;
+    background: white;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #a6a6a6;
+}
+
+.three-one {
+    font-size: 1.6rem;
+    color: #5a6f93;
+}
+
+.three-two {
+    margin: 0 0.85rem;
+}
+
+/* 选择按钮 */
+.radio_img {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.85rem;
+}
+
+.img1 {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/service-2.png)no-repeat;
+    background-size: 100% 100%;
+}
+
+.img2 {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/service-1.png)no-repeat;
+    background-size: 100% 100%;
+}

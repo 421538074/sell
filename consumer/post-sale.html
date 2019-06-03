@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/post-sale.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">售后</p>
+            <p class="nav-text" @click="edit">编辑</p>
+        </nav>
+
+        <div class="order_bot">
+            <ul class="nav_uu" v-for="(item,index) in list" >
+                <li class="lis_two">
+                    <div class="radio_img" v-show="isshow" @click="select(index)">
+                        <span class="img1" :class="{img2:isAdd.indexOf(index) != -1 }"></span>
+                    </div>
+                    <img src="../img/1.jpg" alt="" class="two-img">
+                    <div class="two_right" @click="goDetail">
+                        <div class="two_right_top">
+                            <p>商品的商品名泰国 i 经费管理法规</p>
+                            <span>x 1</span>
+                        </div>
+                        <p class="two_text">规格：二级</p>
+                        <div class="two_right_mid">
+                            <img src="../img/退.png" alt="">
+                            <p class="two_num">退款完成</p>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="lis_three">
+                    <span>全国包邮</span>
+                    <span class="three-two">总计：</span>
+                    <span class="three-one">¥ 123.00</span>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/post-sale.js"></script>
+</body>
+
+</html>
