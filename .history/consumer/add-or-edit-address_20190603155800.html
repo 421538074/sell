@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑地址</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/confirm-order.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img @click="back" src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">编辑地址</p>
+        </nav>
+        <div v-if="!noAddress" class="order-user-info">
+            <p class="user-contact">
+                你好蔡啊 13852512154
+            </p>
+            <p class="address-detail">
+                详细地址
+            </p>
+        </div>
+        <div v-else class="no-address-wrapper">
+            <img src="../img/address.png" class="address-icon">
+            <p class="add-address-title">添加您的收货地址</p>
+        </div>
+        <ul class="order-goods-list-wrapper">
+            <li v-for="n in 13" class="order-item">
+                <img src="../img/1.jpg" class="goods-icon">
+                <div class="goods-detail">
+                    <p class="goods-title ellipsis">名称名称名称名称名称名称名称名称名称名称名称名称名称名称名称名称</p>
+                    <p class="goods-category">规格：二级</p>
+                    <p class="goods-price-num">
+                        <span class="price">￥123</span>
+                        <span class="post">包邮</span>
+                        <span class="num">× 1</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <div class="post-comments-refund">
+            <p class="post">快递：免邮</p>
+            <textarea class="comments" placeholder="留言（选填）："></textarea>
+            <p class="refund">
+                退款方式：微信退款（15天内可退货退款）
+            </p>
+        </div>
+        <div class="go-pay-operation">
+                <p class="show-pay-money">
+                    实付：￥123
+                </p>
+                <a href="javascript:;" class="go-pay-btn">去付款</a>
+            </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/confirm-order.js"></script>
+</body>
+
+</html>

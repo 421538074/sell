@@ -1,0 +1,14 @@
+div.content{
+    padding-top: 5rem;
+}
+.show-img-wrapper {
+    height: 30vh;
+    max-height: 30vh;
+}
+img.slide-img {
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet-active{
+    background: #D8D8D8;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop-cart.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <p class="nav-bar-title">购物车</p>
+            <p class="management">管理</p>
+        </nav>
+        <!-- 购物车列表 -->
+        <ul class="shop-cart-goods-list">
+            <li class="shop-cart-item">
+                <span class="checkbox">
+                    <img src="../img/select.png" class="select-icon">
+                </span>
+            </li>
+        </ul>
+        <!-- 显示金额，结算 -->
+        <div class="shop-cart-operation">
+            <p class="select-all">
+                <span class="checkbox">
+                    <img src="../img/select.png" class="select-icon">
+                    <img src="../img/selected.png" class="select-icon">
+                </span>
+                <span class="title">全选</span>
+            </p>
+            <div class="total-money-settle">
+                <p class="total-money">
+                    合计：123.00
+                </p>
+                <button class="go-settle">
+                    去结算
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+</body>
+
+</html>

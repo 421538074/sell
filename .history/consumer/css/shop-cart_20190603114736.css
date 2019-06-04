@@ -1,0 +1,23 @@
+div.content {
+    padding-top: 5rem;
+}
+p.management {
+    position: absolute;
+    right: 1rem;
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+img.goods-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+}
+ul.shop-cart-goods-list {
+    border-top: 2px solid #f6f6f6;
+}
+li.shop-cart-item {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    margin-bottom: 1rem;
+}

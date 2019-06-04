@@ -1,0 +1,17 @@
+div.content {
+    padding-top: 5rem;
+}
+p.management {
+    position: absolute;
+    right: 1rem;
+    color: #3E3E3E;
+    font-size: 1.4rem;
+}
+img.goods-icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+}
+li.shop-cart-item {
+    display: flex;
+    align-items: center;

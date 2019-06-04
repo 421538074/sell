@@ -1,0 +1,13 @@
+div.content{
+    padding-top: 5rem;
+}
+li.nearby-shops-item {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-top: 0.5rem solid #f6f6f6;
+}
+img.shop-icon {
+    width: 8rem;
+    height: auto;
+}
