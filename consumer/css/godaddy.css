@@ -69,6 +69,7 @@
 
 .lis_uu {
     display: flex;
+    margin-top: 0.5rem;
 }
 
 .lis_uu li {
@@ -85,4 +86,17 @@
 
 .upImg {
     width: 5rem;
+}
+
+.nav_btn {
+    display: block;
+    width: 90%;
+    height: 3.4rem;
+    background: #5a6f93;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    color: #ffffff;
+    line-height: 3.4rem;
+    text-align: center;
+    margin: 1rem auto;
 }

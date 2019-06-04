@@ -1,0 +1,48 @@
+.content {
+    padding-top: 5rem;
+}
+
+.balance_wrap {
+    padding: 0 1.25rem;
+    margin: 1rem 0 1.9rem 0;
+}
+
+.balance_top {
+    width: 100%;
+    height: 10rem;
+    background: url(../../img/my-balance-1.png)no-repeat;
+    background-size: 100% 100%;
+    padding: 1rem 1rem 0.85rem 1.2rem;
+}
+
+.top-num {
+    font-size: 1.4rem;
+    color: #ffffff;
+    line-height: 1.7rem;
+}
+
+.balance_bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 1.9rem;
+}
+
+.balance_bot p:nth-child(1) {
+    font-size: 4rem;
+    color: #ffffff;
+    line-height: 4rem;
+}
+
+/* mall_nav */
+.mall_nav {
+    padding: 0 1.1rem 0 1.4rem;
+}
+
+.mall_nav h4 {
+    font-size: 1.8rem;
+    color: #333333;
+    line-height: 2.1rem;
+}
