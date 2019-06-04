@@ -80,17 +80,6 @@ Vue.mixin({
                 param[temp[0]] = temp[1];
             });
             return param;
-        },
-        /**
-         * 获得购物车信息
-         */
-        getShopCartList() {
-            
-        }
-    },
-    computed: {
-        shopCart() {
-           return  sessionStorage.getItem('shopCart') ? JSON.parse(sessionStorage.getItem('shopCart')) : [];
         }
     },
     filters: {

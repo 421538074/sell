@@ -120,20 +120,15 @@ new Vue({
          * 删除指定元素
          */
         deleteGoods() {
-            if(this.selectedList.length == 0) {
-                $.alert('请选择商品！');
-                return;
-            }
-            $.confirm("确定要删除这"+this.selectedList.length+"件商品吗？",() => {
-                $.showLoading('正在删除');
-                let newArray = this.selectList.filter((item) => {
-                    return !this.selectedList.includes(item);
-                });
-                this.selectedList = [];
-                this.selectList = newArray;
-                $.hideLoading();
-                $.toast('删除成功','text');
+            $.confirm("确定要删除这"+this.selectedList.length+"件商品吗？", function () {});
+            $.showLoading('正在删除');
+            let newArray = this.selectList.filter((item) => {
+                return !this.selectedList.includes(item);
             });
+            this.selectedList = [];
+            this.selectList = newArray;
+            $.hideLoading();
+            $.toast('删除成功','text');
         },
         // 初始化轮播组件
         initSwiper(el) {
