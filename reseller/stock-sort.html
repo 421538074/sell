@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>库存分类</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/stock-sort.css">
 </head>
 
 <body>
     <div id="app">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">商品分类</p>
+        </nav>
         <div class="nav">
             <input type="text" placeholder=" 搜索关键字">
         </div>
@@ -19,7 +24,7 @@
         <div class="nav_main">
             <div class="nav_left">
                 <ul class="left_uu">
-                    <li class="lis" :class="{active1:n==cur}" v-for="n in 20"  @click="tagTab(n)">
+                    <li class="lis" :class="{active1:n==cur}" v-for="n in 20" @click="tagTab(n)">
                         推荐
                     </li>
 

@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>库存管理</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/agent-stock.css">
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="content">
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">库存管理</p>
+        </nav>
         <div class="stock_nav">
             <div class="nav_wrap" v-for="(item,index) in list">
                 <div class="nav_mid" @click="goDetail">
