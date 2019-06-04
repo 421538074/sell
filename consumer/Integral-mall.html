@@ -23,15 +23,37 @@
             <div class="balance_top">
                 <p class="top-num">我的余额</p>
                 <div class="balance_bot">
-                    <p><i style="font-size: 1.4rem">¥</i> 398</p>
-                    <p @click="goDefinite">明细 ></p>
+                    <p>398</p>
+                    <p @click="goDefinite" style="align-self:flex-end;">明细 ></p>
                 </div>
             </div>
         </div>
 
         <div class="mall_nav">
             <h4>大家都在兑</h4>
+            <div class="goods-wrapper">
+                <div v-for="n in 7" class="good-goods-item" @click="mallDetail">
+                    <img src="../img/1.jpg" class="goods-icon">
+                    <div class="goods-detail">
+                        <p class="goods-name-view">
+                            <span class="goods-name">
+                                商品名称
+                            </span>
+                            <span class="view-nums">
+                                <img src="../img/eye.png" class="view-nums-icon">
+                                <i class="view-nums-title">10</i>
+                            </span>
+                        </p>
+                        <p class="price-buy">
+                            <span class="price">200分</span>
+                            <span class="buy-now">兑换</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
 </body>
 
 </html>

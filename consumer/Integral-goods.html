@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/jquery.weui.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="css/Integral-goods.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <div class="blur" :class="{active:isShowPhotoReview}">
+            <nav class="nav-bar-wrapper">
+                <img @click="back" src="../img/back.png" class="back-icon">
+                <p class="nav-bar-title">商品详情</p>
+            </nav>
+            <div class="goods-pictures-wrapper">
+                <div @click="openPhotoPreview" class="goods-swiper-main swiper-container swiper-container-pictures">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="item in 5">
+                            <img src="../img/1.jpg" class="slide-img" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="goods-detail-wrapper">
+                <p class="main-title-wrapper">
+                    <span class="goods-title">产品名称</span>
+                    <span @click="shareGoods" class="nearby-shops">
+                        <img src="../img/user-4.png" class="share-action-icon">
+                        <!-- <i class="nearby-title">附近门店</i> -->
+                    </span>
+                </p>
+                <p class="goods-title-desc">产品名称</p>
+                <div class="goods-price-delivery">
+                    <p class="goods-price">￥123.00</p>
+                    <p class="delivery-fee">快递：免邮</p>
+                    <p class="sell-counts-month">月销量：124件</p>
+                </div>
+            </div>
+            <div class="tab-bar-wrapper">
+                <div class="tab-bar-item">商品详情</div>
+            </div>
+            <div class="tab-content-wrapper">
+                <div v-show="currentIndex == 0" class="content-detail">
+                    <img v-for="n in 10" src="../img/雷姆.jpg">
+                </div>
+            </div>
+
+            <div class="goods_bot" @click="confirmOrder">
+                <span>立即兑换</span>
+            </div>
+        </div>
+        <!-- 图片预览的数字 -->
+        <span v-show="isShowPhotoReview" class="preview-num">
+            {{currentPreviewIndex+1}} / 5
+        </span>
+        <!-- 分享 -->
+        <div id="goods-share" class="weui-popup__container">
+            <div class="weui-popup__overlay"></div>
+            <div class="weui-popup__modal share">
+                <p class="share-title">
+                    分享至
+                </p>
+                <div class="share-list-wrapper">
+                    <div class="share-item">
+                        <img src="../img/wechat.png" class="share-item-icon">
+                        <p class="share-title-sub">微信好友</p>
+                    </div>
+                    <div class="share-item">
+                        <img src="../img/qq.png" class="share-item-icon">
+                        <p class="share-title-sub">QQ好友</p>
+                    </div>
+                    <div class="share-item">
+                        <img src="../img/link.png" class="share-item-icon">
+                        <p class="share-title-sub">复制链接</p>
+                    </div>
+                </div>
+                <button type="button" @click="cancelShareGoods" class="cancel-share">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swipe.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/Integral-goods.js"></script>
+</body>
+
+</html>
