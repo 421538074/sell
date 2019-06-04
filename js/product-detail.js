@@ -8,8 +8,17 @@ var xm = new Vue({
         tab1: true,
         tab2: false,
         tab3: false,
+        cur: 0,
     },
     methods: {
+        tab(t) {
+            this.cur = t
+            if (t == 1) {
+
+            } else if (t == 2) {
+
+            }
+        },
         share() {
             this.isshade = true
         },

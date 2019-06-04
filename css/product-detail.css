@@ -98,10 +98,13 @@
 .nav_uu li {
     height: 98%;
     line-height: 3.4rem;
+    color: #888888;
+    font-size: 1.4rem;
 }
 
 .color {
     border-bottom: 2px solid #FFD162;
+    color: #000 !important;
 }
 
 .product_tab {
@@ -213,8 +216,17 @@ span.star.sel {
 }
 
 .lis_img {
-    width: 22%;
-    height: auto;
+    width: 17vw;
+    height: 17vw;
+    margin-bottom: 0.5rem;
+}
+
+.lis_for {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.9rem 0;
 }
 
 

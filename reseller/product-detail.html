@@ -42,19 +42,19 @@
 
         <div class="product_nav">
             <ul class="nav_uu">
-                <li class="color">商品详情</li>
-                <li>基本信息</li>
-                <li>买家评论</li>
+                <li @click="tab(0)" :class="{color:cur==0}">商品详情</li>
+                <li @click="tab(1)" :class="{color:cur==1}">基本信息</li>
+                <li @click="tab(2)" :class="{color:cur==2}">买家评论</li>
             </ul>
         </div>
         <!-- 详情 -->
         <div class="product_tab">
-            <div class="tab_one" v-show="tab1">
+            <div class="tab_one" v-show="cur == 0">
                 <div class="tab_one_img" v-for="item in imgList">
                     <img src="../img/雷姆.jpg" alt="">
                 </div>
             </div>
-            <div class="tab_two" v-show="tab2">
+            <div class="tab_two" v-show="cur == 1">
                 <ul class="tab_two_uu">
                     <li>茶类：铁观音</li>
                     <li>产品名称：董点茶 铁观音</li>
@@ -70,7 +70,7 @@
                     <li>食品添加剂：无</li>
                 </ul>
             </div>
-            <div class="tab_three" v-show="tab3">
+            <div class="tab_three" v-show="cur == 2">
                 <h5>全部评论(12)</h5>
                 <div class="tab_wrap">
                     <img src="../img/雷姆.jpg" alt="" class="tab_wrap_img">
@@ -98,9 +98,8 @@
                                 广告的风格风格风格
                             </p>
                         </li>
-                        <li class="lis_for" style="margin: 0.9rem 0;">
-                            <img class="lis_img" src="../img/雷姆.jpg" alt="">
-                            <img class="lis_img" src="../img/雷姆.jpg" alt="">
+                        <li class="lis_for">
+                            <img class="lis_img" v-for="n in 5" src="../img/雷姆.jpg" alt="">
                         </li>
                     </ul>
                 </div>

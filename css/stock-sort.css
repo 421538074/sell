@@ -48,7 +48,7 @@
     line-height: 1.9rem;
     text-align: center;
     padding: 0.75rem 0;
-
+    position: relative;
 }
 
 .left_uu li span {
@@ -103,4 +103,14 @@
 .tab_img {
     width: 100%;
     height: auto;
+}
+
+li.lis.active1::after {
+    content: '';
+    position: absolute;
+    background: #FFD162;
+    height: 70%;
+    width: 5px;
+    left: 0;
+    top: 10%;
 }
