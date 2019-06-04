@@ -14,33 +14,30 @@
 </head>
 
 <body>
-    <div id="app" v-cloak class="content">
+    <div id="app" class="content">
         <nav class="nav-bar-wrapper">
             <img @click="back" src="../img/back.png" class="back-icon">
             <p class="nav-bar-title">收货地址</p>
             <p @click="linkTo('manage-address.html?type=add')" class="management">添加</p>
         </nav>
         <ul class="address-wrapper">
-            <li v-for="address in addressList" class="address-item">
-                <div @click="selectAddress(address.id)" class="address-wrapper">
-                    <p class="user-info-wrapper">
-                        <span class="username">{{address.username}}</span>
-                        <span class="phone">{{address.phone}}</span>
-                    </p>
-                    <p class="detail-address">
-                        {{address.detail}}
-                    </p>
-                </div>
-                <p class="set-default-wrapper" :class="{active:currendDefault == address.id}">
-                    <span @click="setDefault(address.id)" class="set-operation">
-                        <img v-if="currendDefault != address.id" src="../img/按钮1.png" class="set-default-icon">
+            <li @click="selectAddress(address.id)" v-for="address in addressList" class="address-item">
+                <p class="user-info-wrapper">
+                    <span class="username">{{address.username}}</span>
+                    <span class="phone">{{address.phone}}</span>
+                </p>
+                <p class="detail-address">
+                    {{address.detail}}
+                </p>
+                <p class="set-default-wrapper" :class="{active:currendDefault == n}">
+                    <span @click="setDefault(n)" class="set-operation">
+                        <img v-if="currendDefault != n" src="../img/按钮1.png" class="set-default-icon">
                         <img v-else src="../img/checked.png" class="set-default-icon">
                         <i class="set-default-title">设为默认</i>
                     </span>
                     <span class="operation-group">
-                        <img @click="linkTo('manage-address.html?type=edit&id='+item.id)" src="../img/edit.png"
-                            class="edit-delete-icon">
-                        <img @click="deleteAdd(address.id)" src="../img/delete.png" class="edit-delete-icon">
+                        <img @click="linkTo('manage-address.html?type=edit&id='+n)" src="../img/edit.png" class="edit-delete-icon">
+                        <img @click="deleteAdd(n)" src="../img/delete.png" class="edit-delete-icon">
                     </span>
                 </p>
             </li>

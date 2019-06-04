@@ -3,12 +3,7 @@ new Vue({
     data() {
         return {
             noAddress:false,
-            currentAddress:{
-                id:'',
-                username:'',
-                phone:'',
-                detail:''
-            }
+            currentAddress:''
         }
     },
     created() {
