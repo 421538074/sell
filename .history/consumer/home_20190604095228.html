@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <!-- 主内容 -->
+        <div class="main-content-wrapper">
+            <!-- swiper轮播图 -->
+            <div class="swiper-container show-img-wrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="item in 5">
+                        <img src="../img/1.jpg" class="slide-img" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- 定位、搜索 -->
+            <div class="position-search">
+                <div class="position">
+                    <img src="../img/location.png" class="location-icon">
+                    <span class="location-name">南京</span>
+                </div>
+                <div class="search-wrapper">
+                    <input readonly @click="linkTo('search.html')" class="search-input" type="text" placeholder="搜索关键词">
+                </div>
+            </div>
+            <!-- 百货分类 -->
+            <ul class="department-classify">
+                <li @click="linkTo('goods-detail.html')" v-for="n in 5" class="department-iem">
+                    <img src="../img/1.jpg" class="department-icon">
+                    <p class="department-title ellipsis">分类{{n}}</p>
+                </li>
+                <!-- <li @click="linkTo('search.html')" class="department-iem">
+                    <img src="../img/more.png" class="department-icon">
+                    <p class="department-title ellipsis">更多</p>
+                </li> -->
+            </ul>
+            <!-- 热门商品 -->
+            <div class="hot-goods-wrapper">
+                <p class="title">
+                    热门商品
+                </p>
+                <ul class="goods-list-wrapper">
+                    <li @click="linkTo('goods-detail.html')" v-for="n in 3" class="goods-item">
+                        <img src="../img/1.jpg" class="goods-icon">
+                        <p class="goods-title">商品名称</p>
+                        <p class="goods-price">￥111</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 精选商品 -->
+            <div class="hot-goods-wrapper">
+                <p class="title">
+                    精选商品
+                </p>
+                <ul class="goods-list-wrapper">
+                    <li @click="linkTo('goods-detail.html')" v-for="n in 3" class="goods-item">
+                        <img src="../img/1.jpg" class="goods-icon">
+                        <p class="goods-title">商品名称</p>
+                        <p class="goods-price">￥111</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 有好货 -->
+            <div class="good-goods-wrapper">
+                <p class="title">
+                    有好货
+                </p>
+                <div class="goods-wrapper">
+                    <div @click="linkTo('goods-detail.html')" v-for="n in 7" class="good-goods-item">
+                        <img src="../img/1.jpg" class="goods-icon">
+                        <div class="goods-detail">
+                            <p class="goods-name-view">
+                                <span class="goods-name">
+                                    商品名称
+                                </span>
+                                <span class="view-nums">
+                                    <img src="../img/eye.png" class="view-nums-icon">
+                                    <i class="view-nums-title">10</i>
+                                </span>
+                            </p>
+                            <p class="proxy-shop">代理商</p>
+                            <p class="price-buy">
+                                <span class="price">￥200</span>
+                                <span class="buy-now">购买</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="tool-bar-wrapper">
+            <a href="javascript:;" class="nav-item active">
+                <img src="../img/home-active.png" class="nav-item-icon">
+                <span class="tilte">首页</span>
+            </a>
+            <a href="goods-classify.html" class="nav-item">
+                <img src="../img/classify.png" class="nav-item-icon">
+                <span class="tilte">分类</span>
+            </a>
+            <a href="shop-cart.html" class="nav-item">
+                <img src="../img/shop.png" class="nav-item-icon">
+                <span class="tilte">购物车</span>
+            </a>
+            <a href="user.html" class="nav-item">
+                <img src="../img/user.png" class="nav-item-icon">
+                <span class="tilte">我的</span>
+            </a>
+        </nav>
+        <div class="city-picker-wrapper">
+            <div class="city-list-wrapper">
+                <label for="" class="city-name">标签</label>
+                <ul class="city-list-wrapper">
+                    <li class="city-item">名称</li>
+                </ul>
+            </div>
+            <div class="tags-wrapper">
+                字母
+            </div>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="js/vue-mixin.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
