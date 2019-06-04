@@ -43,7 +43,7 @@ $(function () {
         //选择文件按钮
         $file = $("#order-img"),
         //回显的列表
-        $list = $('.lis_uu'),
+        $list = $('.lis_box'),
         //选择要上传的所有文件
         fileList = [];
     //当前选择上传的文件
@@ -52,7 +52,7 @@ $(function () {
     // 监听它的onload事件，load完读取的结果就在它的result属性里了。它是一个base64格式的，可直接赋值给一个img的src.
     $file.on('change', function (e) {
         //上传过图片后再次上传时限值数量
-        var numold = $('.lis_uu>li').length;
+        var numold = $('.lis_box>li').length;
         if (numold >= 5) {
             layer.alert('最多上传5张图片');
             return;
@@ -77,7 +77,7 @@ $(function () {
         for (var i = 0, len = curFile.length; i < len; i++) {
             reviewFile(curFile[i])
         }
-        $('.lis_uu').fadeIn(2500);
+        $('.lis_box').fadeIn(2500);
     })
 
 
@@ -91,16 +91,16 @@ $(function () {
         //监听它的onload事件，load完读取的结果就在它的result属性里了
         fd.onload = function () {
             if (/^image\/[jpeg|png|jpg|gif]/.test(fileType)) {
-                $list.append('<li style="border:solid red px; margin:5px 5px;" class="file-item"><img src="' + this.result + '" alt="" height="70"><span class="file-del">删除</span></li>').children(':last').hide().fadeIn(2500);
+                $list.before('<li style="border:solid red px; margin:5px 5px;" class="file-item"><img src="' + this.result + '" alt="" height="70"><span class="file-del">删除</span></li>').children(':last').hide().fadeIn(2500);
             } else {
-                $list.append('<li class="file-item"><span class="file-name">' + file.name + '</span><span class="file-del">删除</span></li>')
+                $list.before('<li class="file-item"><span class="file-name">' + file.name + '</span><span class="file-del">删除</span></li>')
             }
 
         }
     }
 
     //点击删除按钮事件：
-    $(".lis_uu").on('click', '.file-del', function () {
+    $(".lis_box").on('click', '.file-del', function () {
         let $parent = $(this).parent();
         console.log($parent);
         let index = $parent.index();
@@ -113,8 +113,8 @@ $(function () {
     //点击上传按钮事件：
     $button.on('click', function () {
         var name = $('#name').val();
-        if (fileList.length > 6) {
-            layer.alert('最多允许上传6张图片');
+        if (fileList.length > 5) {
+            layer.alert('最多允许上传5张图片');
             return;
         } else {
             var formData = new FormData();

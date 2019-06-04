@@ -8,28 +8,28 @@
     <title>商品分类</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/my-balance.css">
-
+    <link rel="stylesheet" href="css/invest-money.css">
 </head>
 
 <body>
     <div id="app" class="content">
         <nav class="nav-bar-wrapper">
             <img src="../img/back.png" class="back-icon">
-            <p class="nav-bar-title">我的余额</p>
+            <p class="nav-bar-title">充值</p>
         </nav>
 
-        <div class="balance_wrap">
-            <div class="balance_top">
-                <p class="top-num">我的余额</p>
-                <div class="balance_bot">
-                    <p><i style="font-size: 1.4rem">¥</i> 398</p>
-                    <p @click="goDefinite">明细 ></p>
+        <div class="cash">
+            <div class="cash_wrap">
+                <p>转入金额（元）</p>
+                <div class="line"></div>
+                <div class="cash_nav">
+                    <span>¥</span>
+                    <input type="number" placeholder="输入充值金额">
                 </div>
             </div>
 
-            <span class="balance-title" @click="recharge">充值</span>
-            <span class="balance-text" @click="reMoney">提现</span>
+
+            <span class="cash_btn">确定</span>
         </div>
 
 
@@ -37,7 +37,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/vue.js"></script>
-    <script src="js/my-balance.js"></script>
+    <script src="js/invest-money.js"></script>
 </body>
 
 </html>
