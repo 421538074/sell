@@ -117,7 +117,7 @@
             </a>
         </nav>
         <!-- 城市选择器 -->
-        <div v-cloak class="city-picker-wrapper" :class="{visible:showCitypicker,invisible:!showCitypicker}">
+        <div class="city-picker-wrapper" :class="{visible:showCitypicker,invisible:!showCitypicker}">
             <span @click="closeCityPicker" class="close-city-picker">关闭</span>
             <div class="city-list-wrapper">
                 <template v-for="item in cityData">

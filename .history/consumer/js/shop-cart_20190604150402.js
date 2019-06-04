@@ -124,7 +124,7 @@ new Vue({
                 $.alert('请选择商品！');
                 return;
             }
-            $.confirm("确定要删除这"+this.selectedList.length+"件商品吗？",() => {
+            $.confirm("确定要删除这"+this.selectedList.length+"件商品吗？", function () {
                 $.showLoading('正在删除');
                 let newArray = this.selectList.filter((item) => {
                     return !this.selectedList.includes(item);
@@ -163,7 +163,7 @@ new Vue({
                 $.alert('请选择商品!');
                 return;
             }
-            this.linkTo('confirm-order.html');
+            this.linkTo('pay-way.html');
         }
     },
     watch: {

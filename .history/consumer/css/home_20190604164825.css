@@ -252,6 +252,7 @@ p.price-buy {
 }
 .city-picker-wrapper.invisible{
     left: 100vw;
+    display: none;
 }
 .city-picker-wrapper.visible{
     left: 0;
@@ -310,7 +311,4 @@ span.close-city-picker {
     font-size: 1.6rem;
     padding: 1rem;
     color: #aaaaaa;
-}
-div#allmap{
-    display: none;
 }

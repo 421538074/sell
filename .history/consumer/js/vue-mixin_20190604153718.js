@@ -88,11 +88,6 @@ Vue.mixin({
             
         }
     },
-    computed: {
-        shopCart() {
-           return  sessionStorage.getItem('shopCart') ? JSON.parse(sessionStorage.getItem('shopCart')) : [];
-        }
-    },
     filters: {
         filterImg(url) {
             return url.includes('http') ? url : `http${url}`;

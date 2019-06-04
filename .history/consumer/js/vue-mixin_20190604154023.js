@@ -85,7 +85,7 @@ Vue.mixin({
          * 获得购物车信息
          */
         getShopCartList() {
-            
+
         }
     },
     computed: {

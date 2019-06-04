@@ -8,7 +8,8 @@ new Vue({
             currentPreviewIndex: 0,
             mainType: '',
             subType: '',
-            num: 1
+            num: 1,
+            currentAddress:''
         }
     },
     methods: {

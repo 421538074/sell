@@ -8,7 +8,8 @@ new Vue({
             currentPreviewIndex: 0,
             mainType: '',
             subType: '',
-            num: 1
+            num: 1,
+            currentAddress:''
         }
     },
     methods: {
@@ -110,6 +111,9 @@ new Vue({
         }
     },
     mounted() {
+        if(sessionStorage.getItem('currentAddress')) {
+            this.currentAddress = JSON.parse(sessionStorage.getItem('currentAddress'));
+        }
         this.$nextTick(() => {
             this.initSwiper('.goods-swiper-main', '.swiper-button-prev', '.swiper-button-next');
             this.initSwiper('.goods-swiper-sub', '.swiper-button-prev-2', '.swiper-button-next-2');

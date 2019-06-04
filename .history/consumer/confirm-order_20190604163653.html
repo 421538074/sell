@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    <div v-cloak id="app" class="content">
+    <div id="app" class="content">
         <nav class="nav-bar-wrapper">
             <img @click="back" src="../img/back.png" class="back-icon">
             <p class="nav-bar-title">确认订单</p>
         </nav>
-        <div @click="linkTo('address-list.html?type=c')" v-if="!noAddress" class="order-user-info">
+        <div @click="linkTo('address-list.html')" v-if="!noAddress" class="order-user-info">
             <p class="user-contact">
-                {{currentAddress.username}} {{currentAddress.phone}}
+                {{currentAddress}} 13852512154
             </p>
             <p class="address-detail">
-                {{currentAddress.detail}}
+                详细地址
             </p>
         </div>
         <div @click="linkTo('manage-address.html?type=add')" v-else class="no-address-wrapper">

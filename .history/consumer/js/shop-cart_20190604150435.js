@@ -163,7 +163,7 @@ new Vue({
                 $.alert('请选择商品!');
                 return;
             }
-            this.linkTo('confirm-order.html');
+            this.linkTo('pay-way.html');
         }
     },
     watch: {
