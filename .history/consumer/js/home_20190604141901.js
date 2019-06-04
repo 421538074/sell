@@ -2,9 +2,9 @@ new Vue({
     el: '#app',
     data() {
         return {
-            cityData: [],
-            showCitypicker: false,
-            currentCity: '定位中...'
+            cityData:[],
+            showCitypicker:false,
+            currentCity:'南京市'
         }
     },
     methods: {
@@ -27,7 +27,7 @@ new Vue({
         },
         // 点击字母标签
         showTag(name) {
-            $.toast(name, 'text');
+            $.toast(name,'text');
         },
         // 打开城市选择器
         openCityPicker() {
@@ -43,37 +43,33 @@ new Vue({
             this.closeCityPicker();
         },
         getLocation() {
-            const vm = this;
             var map = new BMap.Map("allmap");
-            var point = new BMap.Point(116.331398, 39.897445);
-            map.centerAndZoom(point, 12);
-
+            var point = new BMap.Point(116.331398,39.897445);
+            map.centerAndZoom(point,12);
+            
             var geolocation = new BMap.Geolocation();
-            geolocation.getCurrentPosition(function(r) {
-                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            geolocation.getCurrentPosition(function(r){
+                if(this.getStatus() == BMAP_STATUS_SUCCESS){
                     var mk = new BMap.Marker(r.point);
                     map.addOverlay(mk);
                     map.panTo(r.point);
-                    vm.currentCity = r.address.city;
-                    // alert('您的位置：' + r.point.lng + ',' + r.point.lat);
-                } else {
-                    vm.currentCity = '定位失败';
-                    // alert('failed' + this.getStatus());
+                    alert('您的位置：'+r.point.lng+','+r.point.lat);
                 }
-            }, {
-                enableHighAccuracy: true
-            })
+                else {
+                    alert('failed'+this.getStatus());
+                }        
+            });
         }
     },
     mounted() {
         $.toast.prototype.defaults.duration = 100;
-        $.get('./data/city.json', (data) => {
+        $.get('./data/city.json',(data) => {
             this.cityData = data;
+            console.log(this.cityData);
         });
         this.$nextTick(() => {
             this.initSwiper('.swiper-container');
-            this.getLocation();
-
         });
+        this.getLocation();
     },
 });

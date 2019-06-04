@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/home.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=2VtfxFekC5Ewo57AMilDFDvsf24Gkth2"></script>
 </head>
 
 <body>
@@ -131,10 +132,8 @@
                 <a @click="showTag(tag.name)" v-for="tag in cityData" :href="'#'+tag.name" class="tag-item">{{tag.name}}</a>
             </div>
         </div>
-        <div id="allmap"></div>
     </div>
     <script src="../js/api.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2VtfxFekC5Ewo57AMilDFDvsf24Gkth2"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/weui.min.js"></script>
     <script src="../js/swiper.min.js"></script>

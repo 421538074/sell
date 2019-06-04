@@ -54,7 +54,8 @@ new Vue({
                     var mk = new BMap.Marker(r.point);
                     map.addOverlay(mk);
                     map.panTo(r.point);
-                    vm.currentCity = r.address.city;
+                    console.log(r);
+                    vm.currentCity = r.city;
                     // alert('您的位置：' + r.point.lng + ',' + r.point.lat);
                 } else {
                     vm.currentCity = '定位失败';
@@ -69,6 +70,7 @@ new Vue({
         $.toast.prototype.defaults.duration = 100;
         $.get('./data/city.json', (data) => {
             this.cityData = data;
+            console.log(this.cityData);
         });
         this.$nextTick(() => {
             this.initSwiper('.swiper-container');
