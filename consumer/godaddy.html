@@ -51,12 +51,15 @@
                         <p>商品图片</p>
                         <p>图片限制5张</p>
                     </div>
-                    <ul class="lis_uu">
-                        <div class="lis_box">
-                            <img src="../img/上传.png" @click="uploadEvent" alt="" class="upImg">
-                            <input type="file" name="" id="order-img" multiple="multiple" hidden />
+                    <div class="release_up_pic">
+                        <div class="up_pic">
+                            <!-- <span class="pic_look" id="delete_pic"></em></span> -->
+                            <span id="chose_pic_btn">
+                                <!-- <input type="file" accept="image/*"> -->
+                                <input type="file" id="order-img" accept="image/*" multiple="multiple" />
+                            </span>
                         </div>
-                    </ul>
+                    </div>
                 </li>
             </ul>
 
@@ -68,6 +71,9 @@
 
 </html>
 <script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../localResizeIMG.js"></script>
+<script type="text/javascript" src="../mobileBUGFix.mini.js"></script>
+
 <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
 <script src="../js/api.js"></script>
 <script src="../js/vue.js"></script>

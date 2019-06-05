@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>进货管理</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/agent-in-product.css">
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="content" >
+        <nav class="nav-bar-wrapper">
+            <img src="../img/back.png" class="back-icon">
+            <p class="nav-bar-title">进货管理</p>
+        </nav>
+
         <div class="nav_tag">
             <ul class="nav_uu">
                 <li>
@@ -27,7 +33,7 @@
         </div>
         <!--  -->
         <div class="nav_main">
-            <div class="nav_one" v-for="(item,index) in list">
+            <div class="nav_one" v-for="(item,index) in 3">
                 <div class="nav_top">
                     <p>订单编号：2141351343</p>
                     <p style="color: #868686;" v-if="this.cur==0">2019-02-04 21:21</p>

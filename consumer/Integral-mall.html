@@ -32,7 +32,7 @@
         <div class="mall_nav">
             <h4>大家都在兑</h4>
             <div class="goods-wrapper">
-                <div v-for="n in 7" class="good-goods-item" @click="mallDetail">
+                <div v-for="n in 7" class="good-goods-item">
                     <img src="../img/1.jpg" class="goods-icon">
                     <div class="goods-detail">
                         <p class="goods-name-view">
@@ -46,7 +46,7 @@
                         </p>
                         <p class="price-buy">
                             <span class="price">200分</span>
-                            <span class="buy-now">兑换</span>
+                            <span class="buy-now" @click="mallDetail">兑换</span>
                         </p>
                     </div>
                 </div>

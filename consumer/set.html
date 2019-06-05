@@ -22,7 +22,8 @@
                 <li>
                     <span>头像修改</span>
                     <div class="lis_box">
-                        <img src="../img/雷姆.jpg" alt="" class="uu_img">
+                        <img @click="uploadEvent" :src="avter==''?'../img/雷姆.jpg':avter" alt="" class="uu_img">
+                        <input type="file" @change="uploadImg($event)" id="order-img" hidden>
                         <img src="../img/arrow-right.png" alt="">
                     </div>
                 </li>
@@ -60,6 +61,7 @@
             </ul>
         </div>
     </div>
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/vue.js"></script>
     <script src="js/vue-mixin.js"></script>

@@ -37,6 +37,39 @@ $(function () {
 
 
 
+var picArr = new Array();// 存储图片
+
+$('input:file').localResizeIMG({
+    width: 800,// 宽度
+    quality: 0.5, // 压缩参数 1 不压缩 越小清晰度越低
+    success: function (result) {
+        var img = new Image();
+        img.src = result.base64;
+        var _str = "<span class='pic_look' style='background-image: url(" + img.src + ")'><em id='delete_pic'>-</em></span>"
+        $('#chose_pic_btn').before(_str);
+        var _i = picArr.length
+        console.log(_i)
+        if (_i == 4) {
+            $("#chose_pic_btn").css('display', 'none')
+        }
+        picArr[_i] = result.base64;
+        // picArr[_i] = _i;
+        console.log(picArr)
+    }
+});
+// 删除
+$(document).on('click', '#delete_pic', function (event) {
+    var aa = $(this).parents(".pic_look").index();
+    picArr.splice(aa, 1);
+    $(this).parents(".pic_look").remove();
+    console.log(picArr);
+});
+
+
+
+
+
+
 
 $(function () {
     var $button = $('#upload'),
